@@ -1,195 +1,118 @@
 ﻿using NLog;
 using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.ServiceModel;
 using System.Threading;
 
 namespace BaseClients
 {
-    public abstract class AbstractCallbackClient<T> : ICallbackClient
-    {
-        protected InstanceContext context;
+	public abstract class AbstractCallbackClient<T> : AbstractClient<T>, ICallbackClient
+	{
+		protected InstanceContext context;
 
-        protected AutoResetEvent heartbeatReset = new AutoResetEvent(false);
+		protected AutoResetEvent heartbeatReset = new AutoResetEvent(false);
 
-        private readonly Guid key = Guid.NewGuid();
+		private readonly Guid key = Guid.NewGuid();
 
-        private NetTcpBinding binding = new NetTcpBinding(SecurityMode.None)
-        {
-            PortSharingEnabled = true
-        };
+		private Thread hearbeatThread;
 
-        private EndpointAddress endpointAddress;
+		private bool isConnected = false;
 
-        private Thread hearbeatThread;
+		private bool isDisposed = false;
 
-        private bool isConnected = false;
+		private Logger logger = LogManager.CreateNullLogger();
 
-        private bool isDisposed = false;
+		private bool terminate = false;
 
-        private Exception lastCaughtException = null;
+		public AbstractCallbackClient(Uri netTcpUri, NetTcpBinding binding = null)
+			: base(netTcpUri, binding)
+		{
+			SetInstanceContext();
 
-        private Logger logger = LogManager.CreateNullLogger();
+			hearbeatThread = new Thread(new ThreadStart(HeartbeatThread));
+			hearbeatThread.Start();
+		}
 
-        private bool terminate = false;
+		~AbstractCallbackClient()
+		{
+			Dispose(false);
+		}
 
-        public AbstractCallbackClient(Uri netTcpUri)
-        {
-            this.endpointAddress = new EndpointAddress(netTcpUri);
+		public event Action<DateTime> Connected;
 
-            SetInstanceContext();
+		public event Action<DateTime> Disconnected;
 
-            hearbeatThread = new Thread(new ThreadStart(HeartbeatThread));
-            hearbeatThread.Start();
-        }
+		public bool IsConnected
+		{
+			get { return isConnected; }
 
-        ~AbstractCallbackClient()
-        {
-            Dispose(false);
-        }
+			protected set
+			{
+				if (isConnected != value)
+				{
+					isConnected = value;
+					OnNotifyPropertyChanged();
 
-        public event Action<DateTime> Connected;
+					Logger.Debug("IsConnected: {0}", value);
 
-        public event Action<DateTime> Disconnected;
+					if (value)
+					{
+						OnConnected(DateTime.Now);
+					}
+					else
+					{
+						OnDisconnected(DateTime.Now);
+					}
+				}
+			}
+		}
 
-        public event PropertyChangedEventHandler PropertyChanged;
+		public Guid Key { get { return key; } }
 
-        public EndpointAddress EndpointAddress { get { return endpointAddress; } }
+		protected bool Terminate => terminate;
 
-        public bool IsConnected
-        {
-            get { return isConnected; }
+		protected new DuplexChannelFactory<T> CreateChannelFactory()
+			=> new DuplexChannelFactory<T>(context, binding, EndpointAddress);
 
-            protected set
-            {
-                if (isConnected != value)
-                {
-                    isConnected = value;
-                    OnNotifyPropertyChanged();
+		protected override void Dispose(bool isDisposing)
+		{
+			if (isDisposed) return;
 
-                    Logger.Debug("IsConnected: {0}", value);
+			terminate = true;
+			heartbeatReset.Set();
+			hearbeatThread.Join();
 
-                    if (value)
-                    {
-                        OnConnected(DateTime.Now);
-                    }
-                    else
-                    {
-                        OnDisconnected(DateTime.Now);
-                    }
-                }
-            }
-        }
+			base.Dispose();
 
-        public Guid Key { get { return key; } }
+			isDisposed = true;
+		}
 
-        public Exception LastCaughtException
-        {
-            get { return lastCaughtException; }
+		protected abstract void HeartbeatThread();
 
-            protected set
-            {
-                if (lastCaughtException != value)
-                {
-                    lastCaughtException = value;
-                    if (value is EndpointNotFoundException)
-                    {
-                        Logger.Warn("EndpointNotFoundException - is The server running?");
-                    }
-                    else
-                    {
-                        Logger.Error(value);
-                    }
-                    OnNotifyPropertyChanged();
-                }
-            }
-        }
+		protected abstract void SetInstanceContext();
 
-        public Logger Logger
-        {
-            get { return logger; }
+		private void OnConnected(DateTime dateTime)
+		{
+			Action<DateTime> handlers = Connected;
 
-            set
-            {
-                if (value == null)
-                {
-                    value = LogManager.CreateNullLogger();
-                }
+			if (handlers != null)
+			{
+				foreach (Action<DateTime> handler in handlers.GetInvocationList())
+				{
+					handler.BeginInvoke(dateTime, null, null);
+				}
+			}
+		}
 
-                logger = value;
-                logger.Info("Binding:{0} PortSharing:{1}", binding.Name, binding.PortSharingEnabled);
-                logger.Info("Endpoint Address:{0}", endpointAddress);
-            }
-        }
-
-        protected bool Terminate { get { return terminate; } }
-
-        public void Dispose()
-        {
-            Dispose(true);
-        }
-
-        protected DuplexChannelFactory<T> CreateChannelFactory()
-        {
-            return new DuplexChannelFactory<T>(context, binding, EndpointAddress);
-        }
-
-        protected virtual void Dispose(bool isDisposing)
-        {
-            if (isDisposed)
-            {
-                return;
-            }
-
-            terminate = true;
-            heartbeatReset.Set();
-            hearbeatThread.Join();
-
-            isDisposed = true;
-        }
-
-        protected ServiceOperationResult HandleClientException(Exception ex)
-        {
-            LastCaughtException = ex;
-            Logger.Error(ex);
-            return ServiceOperationResult.FromClientException(ex);
-        }
-
-        protected abstract void HeartbeatThread();
-
-        protected void OnNotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        protected abstract void SetInstanceContext();
-
-        private void OnConnected(DateTime dateTime)
-        {
-            Action<DateTime> handlers = Connected;
-            if (handlers != null)
-            {
-                foreach (Action<DateTime> handler in handlers.GetInvocationList())
-                {
-                    handler.BeginInvoke(dateTime, null, null);
-                }
-            }
-        }
-
-        private void OnDisconnected(DateTime dateTime)
-        {
-            Action<DateTime> handlers = Disconnected;
-            if (handlers != null)
-            {
-                foreach (Action<DateTime> handler in handlers.GetInvocationList())
-                {
-                    handler.BeginInvoke(dateTime, null, null);
-                }
-            }
-        }
-    }
+		private void OnDisconnected(DateTime dateTime)
+		{
+			Action<DateTime> handlers = Disconnected;
+			if (handlers != null)
+			{
+				foreach (Action<DateTime> handler in handlers.GetInvocationList())
+				{
+					handler.BeginInvoke(dateTime, null, null);
+				}
+			}
+		}
+	}
 }

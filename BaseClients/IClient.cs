@@ -5,18 +5,18 @@ using System.ServiceModel;
 
 namespace BaseClients
 {
-    public interface IClient : IDisposable, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Endpoint address of the service host
-        /// </summary>
-        EndpointAddress EndpointAddress { get; }
+	public interface IClient : IDisposable, INotifyPropertyChanged
+	{
+		/// <summary>
+		/// Endpoint address of the service host
+		/// </summary>
+		EndpointAddress EndpointAddress { get; }
 
-        Exception LastCaughtException { get; }
+		Exception LastCaughtException { get; }
 
-        /// <summary>
-        /// Logger for debugging / monitoring
-        /// </summary>
-        Logger Logger { get; set; }
-    }
+		/// <summary>
+		/// Logger for debugging / monitoring
+		/// </summary>
+		Logger Logger { get; set; }
+	}
 }

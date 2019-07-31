@@ -1,101 +1,102 @@
 ﻿using System;
+using System.Text;
 
 namespace BaseClients
 {
-    public struct ServiceOperationResult
-    {
-        private readonly Exception clientException;
+	public struct ServiceOperationResult
+	{
+		private readonly Exception clientException;
 
-        private readonly uint serviceCode;
+		private readonly uint serviceCode;
 
-        private readonly Exception serviceException;
+		private readonly Exception serviceException;
 
-        private readonly string serviceString;
+		private readonly string serviceString;
 
-        public ServiceOperationResult(uint serviceCode, string serviceString, Exception serviceException, Exception clientException)
-        {
-            this.serviceCode = serviceCode;
-            this.serviceString = serviceString;
-            this.serviceException = serviceException;
-            this.clientException = clientException;
-        }
+		public ServiceOperationResult(uint serviceCode, string serviceString, Exception serviceException, Exception clientException)
+		{
+			this.serviceCode = serviceCode;
+			this.serviceString = serviceString;
+			this.serviceException = serviceException;
+			this.clientException = clientException;
+		}
 
-        public Exception ClientException { get { return clientException; } }
+		public string ToSummaryString()
+		{
+			if (IsSuccessfull) return "Success";
 
-        public bool IsClientError
-        {
-            get { return ClientException != null; }
-        }
+			StringBuilder builder = new StringBuilder();
 
-        public bool IsServiceError
-        {
-            get
-            {
-                // Codes:
-                // NOERROR = 0
-                // CLIENTEXCEPTION = 2
-                return serviceCode != 0 && serviceCode != 2;
-            }
-        }
+			if (IsClientError) builder.AppendFormat("ClientError: {0}", clientException);
 
-        public bool IsSuccessfull
-        {
-            get { return (!IsServiceError && !IsClientError); }
-        }
+			if (IsServiceError) builder.AppendFormat("ServiceError: Code:{0}", serviceCode);
 
-        public uint ServiceCode { get { return serviceCode; } }
+			return builder.ToString();
+		}
 
-        public Exception ServiceException { get { return serviceException; } }
+		public override string ToString() => ToSummaryString();
 
-        public string ServiceString { get { return serviceString; } }
+		public Exception ClientException => clientException; 
 
-        public static ServiceOperationResult FromClientException(Exception ex)
-        {
-            if (ex == null)
-            {
-                throw new ArgumentNullException();
-            }
+		public bool IsClientError => ClientException != null;
 
-            return new ServiceOperationResult
-                (
-                    2, // Client exception
-                    "CLIENTEXCEPTION",
-                    null,
-                    ex
-                );
-        }
+		public bool IsServiceError
+		{
+			get
+			{
+				// Codes:
+				// NOERROR = 0
+				// CLIENTEXCEPTION = 2
+				return serviceCode != 0 && serviceCode != 2;
+			}
+		}
 
-        public static bool operator !=(ServiceOperationResult result, bool value)
-        {
-            return !(result == value);
-        }
+		public bool IsSuccessfull => (!IsServiceError && !IsClientError); 
 
-        public static bool operator ==(ServiceOperationResult result, bool value)
-        {
-            return result.IsSuccessfull == value;
-        }
+		public uint ServiceCode => serviceCode; 
 
-        public override bool Equals(object obj)
-        {
-            if (!(obj is ServiceOperationResult))
-            {
-                return false;
-            }
+		public Exception ServiceException => serviceException; 
 
-            ServiceOperationResult other = (ServiceOperationResult)obj;
+		public string ServiceString => serviceString; 
 
-            return ServiceCode == other.ServiceCode;
-        }
+		public static ServiceOperationResult FromClientException(Exception ex)
+		{
+			if (ex == null) throw new ArgumentNullException("ex");
 
-        public override int GetHashCode()
-        {
-            int hash = 17;
+			return new ServiceOperationResult
+				(
+					2, // Client exception
+					"CLIENTEXCEPTION",
+					null,
+					ex
+				);
+		}
 
-            unchecked
-            {
-                hash += hash * 23 + serviceCode.GetHashCode();
-            }
-            return hash;
-        }
-    }
+		public static bool operator !=(ServiceOperationResult result, bool value)
+			=> !(result == value);
+
+		public static bool operator ==(ServiceOperationResult result, bool value)
+			=> result.IsSuccessfull == value;
+
+		public override bool Equals(object obj)
+		{
+			if (!(obj is ServiceOperationResult)) return false;
+
+			ServiceOperationResult other = (ServiceOperationResult)obj;
+
+			return ServiceCode == other.ServiceCode;
+		}
+
+		public override int GetHashCode()
+		{
+			int hash = 17;
+
+			unchecked
+			{
+				hash += hash * 23 + serviceCode.GetHashCode();
+			}
+
+			return hash;
+		}
+	}
 }

@@ -6,119 +6,107 @@ using System.ServiceModel;
 
 namespace BaseClients
 {
-    public abstract class AbstractClient<T> : IClient
-    {
-        private readonly NetTcpBinding binding;
+	public abstract class AbstractClient<T> : IClient
+	{
+		protected readonly NetTcpBinding binding;
 
-        private readonly EndpointAddress endpointAddress;
+		private readonly EndpointAddress endpointAddress;
 
-        private bool isDisposed = false;
+		private bool isDisposed = false;
 
-        private Exception lastCaughtException = null;
+		private Exception lastCaughtException = null;
 
-        private Logger logger = LogManager.CreateNullLogger();
+		private Logger logger = LogManager.CreateNullLogger();
 
-        public AbstractClient(Uri netTcpUri, NetTcpBinding binding = null)
-        {
-            this.endpointAddress = new EndpointAddress(netTcpUri);
+		public AbstractClient(Uri netTcpUri, NetTcpBinding binding = null)
+		{
+			this.endpointAddress = new EndpointAddress(netTcpUri);
 
-            if (binding == null)
-            {
-                binding = new NetTcpBinding(SecurityMode.None) { PortSharingEnabled = true };
-            }
+			if (binding == null)
+			{
+				binding = new NetTcpBinding(SecurityMode.None) { PortSharingEnabled = true };
+			}
 
-            this.binding = binding;
-        }
+			this.binding = binding;
+		}
 
-        ~AbstractClient()
-        {
-            Dispose(false);
-        }
+		~AbstractClient()
+		{
+			Dispose(false);
+		}
 
+		public event PropertyChangedEventHandler PropertyChanged;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+		public EndpointAddress EndpointAddress => endpointAddress;
 
-        public void Dispose()
-        {
-            Dispose(true);
-        }
+		/// <summary>
+		/// Last caught exception handled by the client
+		/// </summary>
+		public Exception LastCaughtException
+		{
+			get { return lastCaughtException; }
 
-        protected virtual void Dispose(bool isDisposing)
-        {
-            if (isDisposed)
-            {
-                return;
-            }           
+			protected set
+			{
+				if (lastCaughtException != value)
+				{
+					lastCaughtException = value;
+					if (value is EndpointNotFoundException)
+					{
+						Logger.Warn("EndpointNotFoundException - is the server running?");
+					}
+					else
+					{
+						Logger.Error(value);
+					}
 
-            isDisposed = true;
-        }
+					OnNotifyPropertyChanged();
+				}
+			}
+		}
 
-        public EndpointAddress EndpointAddress { get { return endpointAddress; } }
+		public Logger Logger
+		{
+			get { return logger; }
 
-        /// <summary>
-        /// Last caught exception handled by the client
-        /// </summary>
-        public Exception LastCaughtException
-        {
-            get { return lastCaughtException; }
+			set
+			{
+				if (value == null) value = LogManager.CreateNullLogger();
 
-            protected set
-            {
-                if (lastCaughtException != value)
-                {
-                    lastCaughtException = value;
-                    if (value is EndpointNotFoundException)
-                    {
-                        Logger.Warn("EndpointNotFoundException - is the server running?");
-                    }
-                    else
-                    {
-                        Logger.Error(value);
-                    }
+				logger = value;
+				logger.Info("Binding:{0} PortSharing:{1}", binding.Name, binding.PortSharingEnabled);
+				logger.Info("Endpoint Address:{0}", endpointAddress);
+			}
+		}
 
-                    OnNotifyPropertyChanged();
-                }
-            }
-        }
+		public void Dispose()
+		{
+			Dispose(true);
+		}
 
-        public Logger Logger
-        {
-            get { return logger; }
+		protected ChannelFactory<T> CreateChannelFactory()
+		 => new ChannelFactory<T>(binding, endpointAddress);
 
-            set
-            {
-                if (value == null)
-                {
-                    value = LogManager.CreateNullLogger();
-                }
-                logger = value;
-                logger.Info("Binding:{0} PortSharing:{1}", binding.Name, binding.PortSharingEnabled);
-                logger.Info("Endpoint Address:{0}", endpointAddress);
-            }
-        }
+		protected virtual void Dispose(bool isDisposing)
+		{
+			if (isDisposed) return;
 
-        protected ChannelFactory<T> CreateChannelFactory()
-        {
-            return new ChannelFactory<T>(binding, endpointAddress);
-        }
+			isDisposed = true;
+		}
 
-        protected ServiceOperationResult HandleClientException(Exception ex)
-        {
-            LastCaughtException = ex;
-            Logger.Error(ex);
-            return ServiceOperationResult.FromClientException(ex);
-        }
+		protected ServiceOperationResult HandleClientException(Exception ex)
+		{
+			LastCaughtException = ex;
+			Logger.Error(ex);
+			return ServiceOperationResult.FromClientException(ex);
+		}
 
-        protected void OnNotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            PropertyChangedEventHandler handlers = PropertyChanged;
-            if (handlers != null)
-            {
-                foreach (PropertyChangedEventHandler handler in handlers.GetInvocationList())
-                {
-                    handler.BeginInvoke(this, new PropertyChangedEventArgs(propertyName), null, null);
-                }
-            }
-        }
-    }
+		protected void OnNotifyPropertyChanged([CallerMemberName] String propertyName = "")
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
 }
