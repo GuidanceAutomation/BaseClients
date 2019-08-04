@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="AbstractCallbackClient.cs" />
     <Compile Include="AbstractClient.cs" />
+    <Compile Include="AbstractConsoleOption.cs" />
     <Compile Include="EndpointSettings.cs" />
     <Compile Include="EndpointSettings_ExtensionMethods.cs" />
     <Compile Include="ICallbackClient.cs" />
