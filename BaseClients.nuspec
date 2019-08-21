@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>GACore</id>
+    <id>BaseClients</id>
     <version>1.1.0</version>
     <authors>Martin Davies</authors>
     <owners>Guidance Automation Ltd</owners>
