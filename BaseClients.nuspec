@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/GuidanceAutomation/BaseClients</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Common client components for Guidance Automation clients</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Requires minimum scheduler version of 7.x.x</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags></tags>
     <dependencies>
