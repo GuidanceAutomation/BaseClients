@@ -81,7 +81,7 @@ namespace BaseClients
 			heartbeatReset.Set();
 			hearbeatThread.Join();
 
-			base.Dispose();
+			base.Dispose(isDisposing);
 
 			isDisposed = true;
 		}
