@@ -10,6 +10,10 @@ ______                _____ _ _            _
 https://github.com/GuidanceAutomation/BaseClients
 https://www.guidanceautomation.com/
 
+v1.1.1(7th Sep 19)
+
+* Fixes disposing stack overflow bugfix.
+
 v1.1.0 (21th Aug 19)
 
 * Refactors inheritance.
