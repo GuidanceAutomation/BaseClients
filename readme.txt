@@ -5,12 +5,16 @@ ______                _____ _ _            _
 | ___ \/ _` / __|/ _ \ |   | | |/ _ \ '_ \| __/ __|
 | |_/ / (_| \__ \  __/ \__/\ | |  __/ | | | |_\__ \
 \____/ \__,_|___/\___|\____/_|_|\___|_| |_|\__|___/
-                                                   
-                                                   
+                                                                                                      
 https://github.com/GuidanceAutomation/BaseClients
 https://www.guidanceautomation.com/
 
-v1.1.1(7th Sep 19)
+v1.2.0 (12th Sep 19)
+
+* Adds BaseClients.Controls.
+* Adds basic IsConnectedControl for callback clients. 
+
+v1.1.1 (7th Sep 19)
 
 * Fixes disposing stack overflow bugfix.
 
