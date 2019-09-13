@@ -9,6 +9,10 @@ ______                _____ _ _            _
 https://github.com/GuidanceAutomation/BaseClients
 https://www.guidanceautomation.com/
 
+v1.2.1 (13th Sep 19)
+
+* Updates all assemblies to .net framework 4.7.2.
+
 v1.2.0 (12th Sep 19)
 
 * Adds BaseClients.Controls.
