@@ -1,0 +1,19 @@
+apiRules:
+- exclude:
+      uidRegex: ^System\.Object
+      type: Type
+- exclude:
+      uidRegex: ^System\.Windows\.Controls
+      type: Type
+- exclude:
+      uidRegex: ^System\.Windows\.FrameworkElement
+      type: Type
+- exclude:
+      uidRegex: ^System\.Windows\.UIElement
+      type: Type 
+- exclude:
+      uidRegex: ^System\.Windows\.Media\.Visual
+      type: Type 
+- exclude:
+      uidRegex: ^System\.Windows\.DependencyObject
+      type: Type 

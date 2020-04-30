@@ -1,7 +1,15 @@
-BASECLIENTS
-                                                                                                      
+______                _____ _ _            _       
+| ___ \              /  __ \ (_)          | |      
+| |_/ / __ _ ___  ___| /  \/ |_  ___ _ __ | |_ ___
+| ___ \/ _` / __|/ _ \ |   | | |/ _ \ '_ \| __/ __|
+| |_/ / (_| \__ \  __/ \__/\ | |  __/ | | | |_\__ \
+\____/ \__,_|___/\___|\____/_|_|\___|_| |_|\__|___/
+ 
 * Read the documentation here:
 https://guidanceautomation.github.io/BaseClients/
+                
+* Source available here:                                              
+https://github.com/GuidanceAutomation/BaseClients
 
 Copyright Guidance Automation Ltd 2020
 https://www.guidanceautomation.com/

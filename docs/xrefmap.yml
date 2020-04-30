@@ -1,0 +1,894 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: BaseClients.Controls
+  name: BaseClients.Controls
+  href: api/BaseClients.Controls.html
+  commentId: N:BaseClients.Controls
+  fullName: BaseClients.Controls
+  nameWithType: BaseClients.Controls
+- uid: BaseClients.Controls.IsConnectedControl
+  name: IsConnectedControl
+  href: api/BaseClients.Controls.IsConnectedControl.html
+  commentId: T:BaseClients.Controls.IsConnectedControl
+  fullName: BaseClients.Controls.IsConnectedControl
+  nameWithType: IsConnectedControl
+- uid: BaseClients.Controls.IsConnectedControl.#ctor
+  name: IsConnectedControl()
+  href: api/BaseClients.Controls.IsConnectedControl.html#BaseClients_Controls_IsConnectedControl__ctor
+  commentId: M:BaseClients.Controls.IsConnectedControl.#ctor
+  fullName: BaseClients.Controls.IsConnectedControl.IsConnectedControl()
+  nameWithType: IsConnectedControl.IsConnectedControl()
+- uid: BaseClients.Controls.IsConnectedControl.#ctor*
+  name: IsConnectedControl
+  href: api/BaseClients.Controls.IsConnectedControl.html#BaseClients_Controls_IsConnectedControl__ctor_
+  commentId: Overload:BaseClients.Controls.IsConnectedControl.#ctor
+  isSpec: "True"
+  fullName: BaseClients.Controls.IsConnectedControl.IsConnectedControl
+  nameWithType: IsConnectedControl.IsConnectedControl
+- uid: BaseClients.Core
+  name: BaseClients.Core
+  href: api/BaseClients.Core.html
+  commentId: N:BaseClients.Core
+  fullName: BaseClients.Core
+  nameWithType: BaseClients.Core
+- uid: BaseClients.Core.AbstractCallbackClient`1
+  name: AbstractCallbackClient<T>
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html
+  commentId: T:BaseClients.Core.AbstractCallbackClient`1
+  name.vb: AbstractCallbackClient(Of T)
+  fullName: BaseClients.Core.AbstractCallbackClient<T>
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T)
+  nameWithType: AbstractCallbackClient<T>
+  nameWithType.vb: AbstractCallbackClient(Of T)
+- uid: BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.ServiceModel.NetTcpBinding)
+  name: AbstractCallbackClient(Uri, NetTcpBinding)
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1__ctor_System_Uri_System_ServiceModel_NetTcpBinding_
+  commentId: M:BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.ServiceModel.NetTcpBinding)
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.AbstractCallbackClient(System.Uri, System.ServiceModel.NetTcpBinding)
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).AbstractCallbackClient(System.Uri, System.ServiceModel.NetTcpBinding)
+  nameWithType: AbstractCallbackClient<T>.AbstractCallbackClient(Uri, NetTcpBinding)
+  nameWithType.vb: AbstractCallbackClient(Of T).AbstractCallbackClient(Uri, NetTcpBinding)
+- uid: BaseClients.Core.AbstractCallbackClient`1.#ctor*
+  name: AbstractCallbackClient
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1__ctor_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.#ctor
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.AbstractCallbackClient
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).AbstractCallbackClient
+  nameWithType: AbstractCallbackClient<T>.AbstractCallbackClient
+  nameWithType.vb: AbstractCallbackClient(Of T).AbstractCallbackClient
+- uid: BaseClients.Core.AbstractCallbackClient`1.Connected
+  name: Connected
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Connected
+  commentId: E:BaseClients.Core.AbstractCallbackClient`1.Connected
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Connected
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Connected
+  nameWithType: AbstractCallbackClient<T>.Connected
+  nameWithType.vb: AbstractCallbackClient(Of T).Connected
+- uid: BaseClients.Core.AbstractCallbackClient`1.context
+  name: context
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_context
+  commentId: F:BaseClients.Core.AbstractCallbackClient`1.context
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.context
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).context
+  nameWithType: AbstractCallbackClient<T>.context
+  nameWithType.vb: AbstractCallbackClient(Of T).context
+- uid: BaseClients.Core.AbstractCallbackClient`1.CreateChannelFactory
+  name: CreateChannelFactory()
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_CreateChannelFactory
+  commentId: M:BaseClients.Core.AbstractCallbackClient`1.CreateChannelFactory
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.CreateChannelFactory()
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).CreateChannelFactory()
+  nameWithType: AbstractCallbackClient<T>.CreateChannelFactory()
+  nameWithType.vb: AbstractCallbackClient(Of T).CreateChannelFactory()
+- uid: BaseClients.Core.AbstractCallbackClient`1.CreateChannelFactory*
+  name: CreateChannelFactory
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_CreateChannelFactory_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.CreateChannelFactory
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.CreateChannelFactory
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).CreateChannelFactory
+  nameWithType: AbstractCallbackClient<T>.CreateChannelFactory
+  nameWithType.vb: AbstractCallbackClient(Of T).CreateChannelFactory
+- uid: BaseClients.Core.AbstractCallbackClient`1.Disconnected
+  name: Disconnected
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Disconnected
+  commentId: E:BaseClients.Core.AbstractCallbackClient`1.Disconnected
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Disconnected
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Disconnected
+  nameWithType: AbstractCallbackClient<T>.Disconnected
+  nameWithType.vb: AbstractCallbackClient(Of T).Disconnected
+- uid: BaseClients.Core.AbstractCallbackClient`1.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Dispose_System_Boolean_
+  commentId: M:BaseClients.Core.AbstractCallbackClient`1.Dispose(System.Boolean)
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Dispose(System.Boolean)
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Dispose(System.Boolean)
+  nameWithType: AbstractCallbackClient<T>.Dispose(Boolean)
+  nameWithType.vb: AbstractCallbackClient(Of T).Dispose(Boolean)
+- uid: BaseClients.Core.AbstractCallbackClient`1.Dispose*
+  name: Dispose
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Dispose_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.Dispose
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Dispose
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Dispose
+  nameWithType: AbstractCallbackClient<T>.Dispose
+  nameWithType.vb: AbstractCallbackClient(Of T).Dispose
+- uid: BaseClients.Core.AbstractCallbackClient`1.Finalize
+  name: Finalize()
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Finalize
+  commentId: M:BaseClients.Core.AbstractCallbackClient`1.Finalize
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Finalize()
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Finalize()
+  nameWithType: AbstractCallbackClient<T>.Finalize()
+  nameWithType.vb: AbstractCallbackClient(Of T).Finalize()
+- uid: BaseClients.Core.AbstractCallbackClient`1.Finalize*
+  name: Finalize
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Finalize_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.Finalize
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Finalize
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Finalize
+  nameWithType: AbstractCallbackClient<T>.Finalize
+  nameWithType.vb: AbstractCallbackClient(Of T).Finalize
+- uid: BaseClients.Core.AbstractCallbackClient`1.heartbeatReset
+  name: heartbeatReset
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_heartbeatReset
+  commentId: F:BaseClients.Core.AbstractCallbackClient`1.heartbeatReset
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.heartbeatReset
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).heartbeatReset
+  nameWithType: AbstractCallbackClient<T>.heartbeatReset
+  nameWithType.vb: AbstractCallbackClient(Of T).heartbeatReset
+- uid: BaseClients.Core.AbstractCallbackClient`1.HeartbeatThread
+  name: HeartbeatThread()
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_HeartbeatThread
+  commentId: M:BaseClients.Core.AbstractCallbackClient`1.HeartbeatThread
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.HeartbeatThread()
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).HeartbeatThread()
+  nameWithType: AbstractCallbackClient<T>.HeartbeatThread()
+  nameWithType.vb: AbstractCallbackClient(Of T).HeartbeatThread()
+- uid: BaseClients.Core.AbstractCallbackClient`1.HeartbeatThread*
+  name: HeartbeatThread
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_HeartbeatThread_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.HeartbeatThread
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.HeartbeatThread
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).HeartbeatThread
+  nameWithType: AbstractCallbackClient<T>.HeartbeatThread
+  nameWithType.vb: AbstractCallbackClient(Of T).HeartbeatThread
+- uid: BaseClients.Core.AbstractCallbackClient`1.IsConnected
+  name: IsConnected
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_IsConnected
+  commentId: P:BaseClients.Core.AbstractCallbackClient`1.IsConnected
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.IsConnected
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).IsConnected
+  nameWithType: AbstractCallbackClient<T>.IsConnected
+  nameWithType.vb: AbstractCallbackClient(Of T).IsConnected
+- uid: BaseClients.Core.AbstractCallbackClient`1.IsConnected*
+  name: IsConnected
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_IsConnected_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.IsConnected
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.IsConnected
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).IsConnected
+  nameWithType: AbstractCallbackClient<T>.IsConnected
+  nameWithType.vb: AbstractCallbackClient(Of T).IsConnected
+- uid: BaseClients.Core.AbstractCallbackClient`1.Key
+  name: Key
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Key
+  commentId: P:BaseClients.Core.AbstractCallbackClient`1.Key
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Key
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Key
+  nameWithType: AbstractCallbackClient<T>.Key
+  nameWithType.vb: AbstractCallbackClient(Of T).Key
+- uid: BaseClients.Core.AbstractCallbackClient`1.Key*
+  name: Key
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Key_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.Key
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Key
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Key
+  nameWithType: AbstractCallbackClient<T>.Key
+  nameWithType.vb: AbstractCallbackClient(Of T).Key
+- uid: BaseClients.Core.AbstractCallbackClient`1.SetInstanceContext
+  name: SetInstanceContext()
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_SetInstanceContext
+  commentId: M:BaseClients.Core.AbstractCallbackClient`1.SetInstanceContext
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.SetInstanceContext()
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).SetInstanceContext()
+  nameWithType: AbstractCallbackClient<T>.SetInstanceContext()
+  nameWithType.vb: AbstractCallbackClient(Of T).SetInstanceContext()
+- uid: BaseClients.Core.AbstractCallbackClient`1.SetInstanceContext*
+  name: SetInstanceContext
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_SetInstanceContext_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.SetInstanceContext
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.SetInstanceContext
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).SetInstanceContext
+  nameWithType: AbstractCallbackClient<T>.SetInstanceContext
+  nameWithType.vb: AbstractCallbackClient(Of T).SetInstanceContext
+- uid: BaseClients.Core.AbstractCallbackClient`1.Terminate
+  name: Terminate
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Terminate
+  commentId: P:BaseClients.Core.AbstractCallbackClient`1.Terminate
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Terminate
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Terminate
+  nameWithType: AbstractCallbackClient<T>.Terminate
+  nameWithType.vb: AbstractCallbackClient(Of T).Terminate
+- uid: BaseClients.Core.AbstractCallbackClient`1.Terminate*
+  name: Terminate
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1_Terminate_
+  commentId: Overload:BaseClients.Core.AbstractCallbackClient`1.Terminate
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.Terminate
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).Terminate
+  nameWithType: AbstractCallbackClient<T>.Terminate
+  nameWithType.vb: AbstractCallbackClient(Of T).Terminate
+- uid: BaseClients.Core.AbstractClient`1
+  name: AbstractClient<T>
+  href: api/BaseClients.Core.AbstractClient-1.html
+  commentId: T:BaseClients.Core.AbstractClient`1
+  name.vb: AbstractClient(Of T)
+  fullName: BaseClients.Core.AbstractClient<T>
+  fullName.vb: BaseClients.Core.AbstractClient(Of T)
+  nameWithType: AbstractClient<T>
+  nameWithType.vb: AbstractClient(Of T)
+- uid: BaseClients.Core.AbstractClient`1.#ctor(System.Uri,System.ServiceModel.NetTcpBinding)
+  name: AbstractClient(Uri, NetTcpBinding)
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1__ctor_System_Uri_System_ServiceModel_NetTcpBinding_
+  commentId: M:BaseClients.Core.AbstractClient`1.#ctor(System.Uri,System.ServiceModel.NetTcpBinding)
+  fullName: BaseClients.Core.AbstractClient<T>.AbstractClient(System.Uri, System.ServiceModel.NetTcpBinding)
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).AbstractClient(System.Uri, System.ServiceModel.NetTcpBinding)
+  nameWithType: AbstractClient<T>.AbstractClient(Uri, NetTcpBinding)
+  nameWithType.vb: AbstractClient(Of T).AbstractClient(Uri, NetTcpBinding)
+- uid: BaseClients.Core.AbstractClient`1.#ctor*
+  name: AbstractClient
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1__ctor_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.#ctor
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.AbstractClient
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).AbstractClient
+  nameWithType: AbstractClient<T>.AbstractClient
+  nameWithType.vb: AbstractClient(Of T).AbstractClient
+- uid: BaseClients.Core.AbstractClient`1.binding
+  name: binding
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_binding
+  commentId: F:BaseClients.Core.AbstractClient`1.binding
+  fullName: BaseClients.Core.AbstractClient<T>.binding
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).binding
+  nameWithType: AbstractClient<T>.binding
+  nameWithType.vb: AbstractClient(Of T).binding
+- uid: BaseClients.Core.AbstractClient`1.CreateChannelFactory
+  name: CreateChannelFactory()
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_CreateChannelFactory
+  commentId: M:BaseClients.Core.AbstractClient`1.CreateChannelFactory
+  fullName: BaseClients.Core.AbstractClient<T>.CreateChannelFactory()
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).CreateChannelFactory()
+  nameWithType: AbstractClient<T>.CreateChannelFactory()
+  nameWithType.vb: AbstractClient(Of T).CreateChannelFactory()
+- uid: BaseClients.Core.AbstractClient`1.CreateChannelFactory*
+  name: CreateChannelFactory
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_CreateChannelFactory_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.CreateChannelFactory
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.CreateChannelFactory
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).CreateChannelFactory
+  nameWithType: AbstractClient<T>.CreateChannelFactory
+  nameWithType.vb: AbstractClient(Of T).CreateChannelFactory
+- uid: BaseClients.Core.AbstractClient`1.Dispose
+  name: Dispose()
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Dispose
+  commentId: M:BaseClients.Core.AbstractClient`1.Dispose
+  fullName: BaseClients.Core.AbstractClient<T>.Dispose()
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).Dispose()
+  nameWithType: AbstractClient<T>.Dispose()
+  nameWithType.vb: AbstractClient(Of T).Dispose()
+- uid: BaseClients.Core.AbstractClient`1.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Dispose_System_Boolean_
+  commentId: M:BaseClients.Core.AbstractClient`1.Dispose(System.Boolean)
+  fullName: BaseClients.Core.AbstractClient<T>.Dispose(System.Boolean)
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).Dispose(System.Boolean)
+  nameWithType: AbstractClient<T>.Dispose(Boolean)
+  nameWithType.vb: AbstractClient(Of T).Dispose(Boolean)
+- uid: BaseClients.Core.AbstractClient`1.Dispose*
+  name: Dispose
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Dispose_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.Dispose
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.Dispose
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).Dispose
+  nameWithType: AbstractClient<T>.Dispose
+  nameWithType.vb: AbstractClient(Of T).Dispose
+- uid: BaseClients.Core.AbstractClient`1.EndpointAddress
+  name: EndpointAddress
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_EndpointAddress
+  commentId: P:BaseClients.Core.AbstractClient`1.EndpointAddress
+  fullName: BaseClients.Core.AbstractClient<T>.EndpointAddress
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).EndpointAddress
+  nameWithType: AbstractClient<T>.EndpointAddress
+  nameWithType.vb: AbstractClient(Of T).EndpointAddress
+- uid: BaseClients.Core.AbstractClient`1.EndpointAddress*
+  name: EndpointAddress
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_EndpointAddress_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.EndpointAddress
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.EndpointAddress
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).EndpointAddress
+  nameWithType: AbstractClient<T>.EndpointAddress
+  nameWithType.vb: AbstractClient(Of T).EndpointAddress
+- uid: BaseClients.Core.AbstractClient`1.Finalize
+  name: Finalize()
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Finalize
+  commentId: M:BaseClients.Core.AbstractClient`1.Finalize
+  fullName: BaseClients.Core.AbstractClient<T>.Finalize()
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).Finalize()
+  nameWithType: AbstractClient<T>.Finalize()
+  nameWithType.vb: AbstractClient(Of T).Finalize()
+- uid: BaseClients.Core.AbstractClient`1.Finalize*
+  name: Finalize
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Finalize_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.Finalize
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.Finalize
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).Finalize
+  nameWithType: AbstractClient<T>.Finalize
+  nameWithType.vb: AbstractClient(Of T).Finalize
+- uid: BaseClients.Core.AbstractClient`1.HandleClientException(System.Exception)
+  name: HandleClientException(Exception)
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_HandleClientException_System_Exception_
+  commentId: M:BaseClients.Core.AbstractClient`1.HandleClientException(System.Exception)
+  fullName: BaseClients.Core.AbstractClient<T>.HandleClientException(System.Exception)
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).HandleClientException(System.Exception)
+  nameWithType: AbstractClient<T>.HandleClientException(Exception)
+  nameWithType.vb: AbstractClient(Of T).HandleClientException(Exception)
+- uid: BaseClients.Core.AbstractClient`1.HandleClientException*
+  name: HandleClientException
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_HandleClientException_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.HandleClientException
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.HandleClientException
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).HandleClientException
+  nameWithType: AbstractClient<T>.HandleClientException
+  nameWithType.vb: AbstractClient(Of T).HandleClientException
+- uid: BaseClients.Core.AbstractClient`1.LastCaughtException
+  name: LastCaughtException
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_LastCaughtException
+  commentId: P:BaseClients.Core.AbstractClient`1.LastCaughtException
+  fullName: BaseClients.Core.AbstractClient<T>.LastCaughtException
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).LastCaughtException
+  nameWithType: AbstractClient<T>.LastCaughtException
+  nameWithType.vb: AbstractClient(Of T).LastCaughtException
+- uid: BaseClients.Core.AbstractClient`1.LastCaughtException*
+  name: LastCaughtException
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_LastCaughtException_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.LastCaughtException
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.LastCaughtException
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).LastCaughtException
+  nameWithType: AbstractClient<T>.LastCaughtException
+  nameWithType.vb: AbstractClient(Of T).LastCaughtException
+- uid: BaseClients.Core.AbstractClient`1.Logger
+  name: Logger
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Logger
+  commentId: P:BaseClients.Core.AbstractClient`1.Logger
+  fullName: BaseClients.Core.AbstractClient<T>.Logger
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).Logger
+  nameWithType: AbstractClient<T>.Logger
+  nameWithType.vb: AbstractClient(Of T).Logger
+- uid: BaseClients.Core.AbstractClient`1.Logger*
+  name: Logger
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Logger_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.Logger
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.Logger
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).Logger
+  nameWithType: AbstractClient<T>.Logger
+  nameWithType.vb: AbstractClient(Of T).Logger
+- uid: BaseClients.Core.AbstractClient`1.OnNotifyPropertyChanged(System.String)
+  name: OnNotifyPropertyChanged(String)
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_OnNotifyPropertyChanged_System_String_
+  commentId: M:BaseClients.Core.AbstractClient`1.OnNotifyPropertyChanged(System.String)
+  fullName: BaseClients.Core.AbstractClient<T>.OnNotifyPropertyChanged(System.String)
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).OnNotifyPropertyChanged(System.String)
+  nameWithType: AbstractClient<T>.OnNotifyPropertyChanged(String)
+  nameWithType.vb: AbstractClient(Of T).OnNotifyPropertyChanged(String)
+- uid: BaseClients.Core.AbstractClient`1.OnNotifyPropertyChanged*
+  name: OnNotifyPropertyChanged
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_OnNotifyPropertyChanged_
+  commentId: Overload:BaseClients.Core.AbstractClient`1.OnNotifyPropertyChanged
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractClient<T>.OnNotifyPropertyChanged
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).OnNotifyPropertyChanged
+  nameWithType: AbstractClient<T>.OnNotifyPropertyChanged
+  nameWithType.vb: AbstractClient(Of T).OnNotifyPropertyChanged
+- uid: BaseClients.Core.AbstractClient`1.PropertyChanged
+  name: PropertyChanged
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_PropertyChanged
+  commentId: E:BaseClients.Core.AbstractClient`1.PropertyChanged
+  fullName: BaseClients.Core.AbstractClient<T>.PropertyChanged
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).PropertyChanged
+  nameWithType: AbstractClient<T>.PropertyChanged
+  nameWithType.vb: AbstractClient(Of T).PropertyChanged
+- uid: BaseClients.Core.AbstractConsoleOption`1
+  name: AbstractConsoleOption<T>
+  href: api/BaseClients.Core.AbstractConsoleOption-1.html
+  commentId: T:BaseClients.Core.AbstractConsoleOption`1
+  name.vb: AbstractConsoleOption(Of T)
+  fullName: BaseClients.Core.AbstractConsoleOption<T>
+  fullName.vb: BaseClients.Core.AbstractConsoleOption(Of T)
+  nameWithType: AbstractConsoleOption<T>
+  nameWithType.vb: AbstractConsoleOption(Of T)
+- uid: BaseClients.Core.AbstractConsoleOption`1.ExecuteOption(`0)
+  name: ExecuteOption(T)
+  href: api/BaseClients.Core.AbstractConsoleOption-1.html#BaseClients_Core_AbstractConsoleOption_1_ExecuteOption__0_
+  commentId: M:BaseClients.Core.AbstractConsoleOption`1.ExecuteOption(`0)
+  fullName: BaseClients.Core.AbstractConsoleOption<T>.ExecuteOption(T)
+  fullName.vb: BaseClients.Core.AbstractConsoleOption(Of T).ExecuteOption(T)
+  nameWithType: AbstractConsoleOption<T>.ExecuteOption(T)
+  nameWithType.vb: AbstractConsoleOption(Of T).ExecuteOption(T)
+- uid: BaseClients.Core.AbstractConsoleOption`1.ExecuteOption*
+  name: ExecuteOption
+  href: api/BaseClients.Core.AbstractConsoleOption-1.html#BaseClients_Core_AbstractConsoleOption_1_ExecuteOption_
+  commentId: Overload:BaseClients.Core.AbstractConsoleOption`1.ExecuteOption
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractConsoleOption<T>.ExecuteOption
+  fullName.vb: BaseClients.Core.AbstractConsoleOption(Of T).ExecuteOption
+  nameWithType: AbstractConsoleOption<T>.ExecuteOption
+  nameWithType.vb: AbstractConsoleOption(Of T).ExecuteOption
+- uid: BaseClients.Core.AbstractConsoleOption`1.HandleExecution(`0)
+  name: HandleExecution(T)
+  href: api/BaseClients.Core.AbstractConsoleOption-1.html#BaseClients_Core_AbstractConsoleOption_1_HandleExecution__0_
+  commentId: M:BaseClients.Core.AbstractConsoleOption`1.HandleExecution(`0)
+  fullName: BaseClients.Core.AbstractConsoleOption<T>.HandleExecution(T)
+  fullName.vb: BaseClients.Core.AbstractConsoleOption(Of T).HandleExecution(T)
+  nameWithType: AbstractConsoleOption<T>.HandleExecution(T)
+  nameWithType.vb: AbstractConsoleOption(Of T).HandleExecution(T)
+- uid: BaseClients.Core.AbstractConsoleOption`1.HandleExecution*
+  name: HandleExecution
+  href: api/BaseClients.Core.AbstractConsoleOption-1.html#BaseClients_Core_AbstractConsoleOption_1_HandleExecution_
+  commentId: Overload:BaseClients.Core.AbstractConsoleOption`1.HandleExecution
+  isSpec: "True"
+  fullName: BaseClients.Core.AbstractConsoleOption<T>.HandleExecution
+  fullName.vb: BaseClients.Core.AbstractConsoleOption(Of T).HandleExecution
+  nameWithType: AbstractConsoleOption<T>.HandleExecution
+  nameWithType.vb: AbstractConsoleOption(Of T).HandleExecution
+- uid: BaseClients.Core.EndpointSettings
+  name: EndpointSettings
+  href: api/BaseClients.Core.EndpointSettings.html
+  commentId: T:BaseClients.Core.EndpointSettings
+  fullName: BaseClients.Core.EndpointSettings
+  nameWithType: EndpointSettings
+- uid: BaseClients.Core.EndpointSettings.#ctor(System.Net.IPAddress,System.UInt16,System.UInt16,System.UInt16)
+  name: EndpointSettings(IPAddress, UInt16, UInt16, UInt16)
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings__ctor_System_Net_IPAddress_System_UInt16_System_UInt16_System_UInt16_
+  commentId: M:BaseClients.Core.EndpointSettings.#ctor(System.Net.IPAddress,System.UInt16,System.UInt16,System.UInt16)
+  fullName: BaseClients.Core.EndpointSettings.EndpointSettings(System.Net.IPAddress, System.UInt16, System.UInt16, System.UInt16)
+  nameWithType: EndpointSettings.EndpointSettings(IPAddress, UInt16, UInt16, UInt16)
+- uid: BaseClients.Core.EndpointSettings.#ctor*
+  name: EndpointSettings
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings__ctor_
+  commentId: Overload:BaseClients.Core.EndpointSettings.#ctor
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings.EndpointSettings
+  nameWithType: EndpointSettings.EndpointSettings
+- uid: BaseClients.Core.EndpointSettings.DEFAULTHTTPPORT
+  name: DEFAULTHTTPPORT
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_DEFAULTHTTPPORT
+  commentId: F:BaseClients.Core.EndpointSettings.DEFAULTHTTPPORT
+  fullName: BaseClients.Core.EndpointSettings.DEFAULTHTTPPORT
+  nameWithType: EndpointSettings.DEFAULTHTTPPORT
+- uid: BaseClients.Core.EndpointSettings.DEFAULTTCPPORT
+  name: DEFAULTTCPPORT
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_DEFAULTTCPPORT
+  commentId: F:BaseClients.Core.EndpointSettings.DEFAULTTCPPORT
+  fullName: BaseClients.Core.EndpointSettings.DEFAULTTCPPORT
+  nameWithType: EndpointSettings.DEFAULTTCPPORT
+- uid: BaseClients.Core.EndpointSettings.DEFAULTUDPPORT
+  name: DEFAULTUDPPORT
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_DEFAULTUDPPORT
+  commentId: F:BaseClients.Core.EndpointSettings.DEFAULTUDPPORT
+  fullName: BaseClients.Core.EndpointSettings.DEFAULTUDPPORT
+  nameWithType: EndpointSettings.DEFAULTUDPPORT
+- uid: BaseClients.Core.EndpointSettings.HttpPort
+  name: HttpPort
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_HttpPort
+  commentId: P:BaseClients.Core.EndpointSettings.HttpPort
+  fullName: BaseClients.Core.EndpointSettings.HttpPort
+  nameWithType: EndpointSettings.HttpPort
+- uid: BaseClients.Core.EndpointSettings.HttpPort*
+  name: HttpPort
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_HttpPort_
+  commentId: Overload:BaseClients.Core.EndpointSettings.HttpPort
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings.HttpPort
+  nameWithType: EndpointSettings.HttpPort
+- uid: BaseClients.Core.EndpointSettings.IPAddress
+  name: IPAddress
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_IPAddress
+  commentId: P:BaseClients.Core.EndpointSettings.IPAddress
+  fullName: BaseClients.Core.EndpointSettings.IPAddress
+  nameWithType: EndpointSettings.IPAddress
+- uid: BaseClients.Core.EndpointSettings.IPAddress*
+  name: IPAddress
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_IPAddress_
+  commentId: Overload:BaseClients.Core.EndpointSettings.IPAddress
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings.IPAddress
+  nameWithType: EndpointSettings.IPAddress
+- uid: BaseClients.Core.EndpointSettings.TcpPort
+  name: TcpPort
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_TcpPort
+  commentId: P:BaseClients.Core.EndpointSettings.TcpPort
+  fullName: BaseClients.Core.EndpointSettings.TcpPort
+  nameWithType: EndpointSettings.TcpPort
+- uid: BaseClients.Core.EndpointSettings.TcpPort*
+  name: TcpPort
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_TcpPort_
+  commentId: Overload:BaseClients.Core.EndpointSettings.TcpPort
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings.TcpPort
+  nameWithType: EndpointSettings.TcpPort
+- uid: BaseClients.Core.EndpointSettings.ToString
+  name: ToString()
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_ToString
+  commentId: M:BaseClients.Core.EndpointSettings.ToString
+  fullName: BaseClients.Core.EndpointSettings.ToString()
+  nameWithType: EndpointSettings.ToString()
+- uid: BaseClients.Core.EndpointSettings.ToString*
+  name: ToString
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_ToString_
+  commentId: Overload:BaseClients.Core.EndpointSettings.ToString
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings.ToString
+  nameWithType: EndpointSettings.ToString
+- uid: BaseClients.Core.EndpointSettings.ToSummaryString
+  name: ToSummaryString()
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_ToSummaryString
+  commentId: M:BaseClients.Core.EndpointSettings.ToSummaryString
+  fullName: BaseClients.Core.EndpointSettings.ToSummaryString()
+  nameWithType: EndpointSettings.ToSummaryString()
+- uid: BaseClients.Core.EndpointSettings.ToSummaryString*
+  name: ToSummaryString
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_ToSummaryString_
+  commentId: Overload:BaseClients.Core.EndpointSettings.ToSummaryString
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings.ToSummaryString
+  nameWithType: EndpointSettings.ToSummaryString
+- uid: BaseClients.Core.EndpointSettings.UdpPort
+  name: UdpPort
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_UdpPort
+  commentId: P:BaseClients.Core.EndpointSettings.UdpPort
+  fullName: BaseClients.Core.EndpointSettings.UdpPort
+  nameWithType: EndpointSettings.UdpPort
+- uid: BaseClients.Core.EndpointSettings.UdpPort*
+  name: UdpPort
+  href: api/BaseClients.Core.EndpointSettings.html#BaseClients_Core_EndpointSettings_UdpPort_
+  commentId: Overload:BaseClients.Core.EndpointSettings.UdpPort
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings.UdpPort
+  nameWithType: EndpointSettings.UdpPort
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods
+  name: EndpointSettings_ExtensionMethods
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html
+  commentId: T:BaseClients.Core.EndpointSettings_ExtensionMethods
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods
+  nameWithType: EndpointSettings_ExtensionMethods
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase(BaseClients.Core.EndpointSettings)
+  name: ToHttpBase(EndpointSettings)
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToHttpBase_BaseClients_Core_EndpointSettings_
+  commentId: M:BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase(BaseClients.Core.EndpointSettings)
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase(BaseClients.Core.EndpointSettings)
+  nameWithType: EndpointSettings_ExtensionMethods.ToHttpBase(EndpointSettings)
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase*
+  name: ToHttpBase
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToHttpBase_
+  commentId: Overload:BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase
+  nameWithType: EndpointSettings_ExtensionMethods.ToHttpBase
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase(BaseClients.Core.EndpointSettings)
+  name: ToTcpBase(EndpointSettings)
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToTcpBase_BaseClients_Core_EndpointSettings_
+  commentId: M:BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase(BaseClients.Core.EndpointSettings)
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase(BaseClients.Core.EndpointSettings)
+  nameWithType: EndpointSettings_ExtensionMethods.ToTcpBase(EndpointSettings)
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase*
+  name: ToTcpBase
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToTcpBase_
+  commentId: Overload:BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase
+  nameWithType: EndpointSettings_ExtensionMethods.ToTcpBase
+- uid: BaseClients.Core.ICallbackClient
+  name: ICallbackClient
+  href: api/BaseClients.Core.ICallbackClient.html
+  commentId: T:BaseClients.Core.ICallbackClient
+  fullName: BaseClients.Core.ICallbackClient
+  nameWithType: ICallbackClient
+- uid: BaseClients.Core.ICallbackClient.Connected
+  name: Connected
+  href: api/BaseClients.Core.ICallbackClient.html#BaseClients_Core_ICallbackClient_Connected
+  commentId: E:BaseClients.Core.ICallbackClient.Connected
+  fullName: BaseClients.Core.ICallbackClient.Connected
+  nameWithType: ICallbackClient.Connected
+- uid: BaseClients.Core.ICallbackClient.Disconnected
+  name: Disconnected
+  href: api/BaseClients.Core.ICallbackClient.html#BaseClients_Core_ICallbackClient_Disconnected
+  commentId: E:BaseClients.Core.ICallbackClient.Disconnected
+  fullName: BaseClients.Core.ICallbackClient.Disconnected
+  nameWithType: ICallbackClient.Disconnected
+- uid: BaseClients.Core.ICallbackClient.IsConnected
+  name: IsConnected
+  href: api/BaseClients.Core.ICallbackClient.html#BaseClients_Core_ICallbackClient_IsConnected
+  commentId: P:BaseClients.Core.ICallbackClient.IsConnected
+  fullName: BaseClients.Core.ICallbackClient.IsConnected
+  nameWithType: ICallbackClient.IsConnected
+- uid: BaseClients.Core.ICallbackClient.IsConnected*
+  name: IsConnected
+  href: api/BaseClients.Core.ICallbackClient.html#BaseClients_Core_ICallbackClient_IsConnected_
+  commentId: Overload:BaseClients.Core.ICallbackClient.IsConnected
+  isSpec: "True"
+  fullName: BaseClients.Core.ICallbackClient.IsConnected
+  nameWithType: ICallbackClient.IsConnected
+- uid: BaseClients.Core.ICallbackClient.Key
+  name: Key
+  href: api/BaseClients.Core.ICallbackClient.html#BaseClients_Core_ICallbackClient_Key
+  commentId: P:BaseClients.Core.ICallbackClient.Key
+  fullName: BaseClients.Core.ICallbackClient.Key
+  nameWithType: ICallbackClient.Key
+- uid: BaseClients.Core.ICallbackClient.Key*
+  name: Key
+  href: api/BaseClients.Core.ICallbackClient.html#BaseClients_Core_ICallbackClient_Key_
+  commentId: Overload:BaseClients.Core.ICallbackClient.Key
+  isSpec: "True"
+  fullName: BaseClients.Core.ICallbackClient.Key
+  nameWithType: ICallbackClient.Key
+- uid: BaseClients.Core.IClient
+  name: IClient
+  href: api/BaseClients.Core.IClient.html
+  commentId: T:BaseClients.Core.IClient
+  fullName: BaseClients.Core.IClient
+  nameWithType: IClient
+- uid: BaseClients.Core.IClient.EndpointAddress
+  name: EndpointAddress
+  href: api/BaseClients.Core.IClient.html#BaseClients_Core_IClient_EndpointAddress
+  commentId: P:BaseClients.Core.IClient.EndpointAddress
+  fullName: BaseClients.Core.IClient.EndpointAddress
+  nameWithType: IClient.EndpointAddress
+- uid: BaseClients.Core.IClient.EndpointAddress*
+  name: EndpointAddress
+  href: api/BaseClients.Core.IClient.html#BaseClients_Core_IClient_EndpointAddress_
+  commentId: Overload:BaseClients.Core.IClient.EndpointAddress
+  isSpec: "True"
+  fullName: BaseClients.Core.IClient.EndpointAddress
+  nameWithType: IClient.EndpointAddress
+- uid: BaseClients.Core.IClient.LastCaughtException
+  name: LastCaughtException
+  href: api/BaseClients.Core.IClient.html#BaseClients_Core_IClient_LastCaughtException
+  commentId: P:BaseClients.Core.IClient.LastCaughtException
+  fullName: BaseClients.Core.IClient.LastCaughtException
+  nameWithType: IClient.LastCaughtException
+- uid: BaseClients.Core.IClient.LastCaughtException*
+  name: LastCaughtException
+  href: api/BaseClients.Core.IClient.html#BaseClients_Core_IClient_LastCaughtException_
+  commentId: Overload:BaseClients.Core.IClient.LastCaughtException
+  isSpec: "True"
+  fullName: BaseClients.Core.IClient.LastCaughtException
+  nameWithType: IClient.LastCaughtException
+- uid: BaseClients.Core.IClient.Logger
+  name: Logger
+  href: api/BaseClients.Core.IClient.html#BaseClients_Core_IClient_Logger
+  commentId: P:BaseClients.Core.IClient.Logger
+  fullName: BaseClients.Core.IClient.Logger
+  nameWithType: IClient.Logger
+- uid: BaseClients.Core.IClient.Logger*
+  name: Logger
+  href: api/BaseClients.Core.IClient.html#BaseClients_Core_IClient_Logger_
+  commentId: Overload:BaseClients.Core.IClient.Logger
+  isSpec: "True"
+  fullName: BaseClients.Core.IClient.Logger
+  nameWithType: IClient.Logger
+- uid: BaseClients.Core.ServiceOperationResult
+  name: ServiceOperationResult
+  href: api/BaseClients.Core.ServiceOperationResult.html
+  commentId: T:BaseClients.Core.ServiceOperationResult
+  fullName: BaseClients.Core.ServiceOperationResult
+  nameWithType: ServiceOperationResult
+- uid: BaseClients.Core.ServiceOperationResult.#ctor(System.UInt32,System.String,System.Exception,System.Exception)
+  name: ServiceOperationResult(UInt32, String, Exception, Exception)
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult__ctor_System_UInt32_System_String_System_Exception_System_Exception_
+  commentId: M:BaseClients.Core.ServiceOperationResult.#ctor(System.UInt32,System.String,System.Exception,System.Exception)
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceOperationResult(System.UInt32, System.String, System.Exception, System.Exception)
+  nameWithType: ServiceOperationResult.ServiceOperationResult(UInt32, String, Exception, Exception)
+- uid: BaseClients.Core.ServiceOperationResult.#ctor*
+  name: ServiceOperationResult
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult__ctor_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.#ctor
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceOperationResult
+  nameWithType: ServiceOperationResult.ServiceOperationResult
+- uid: BaseClients.Core.ServiceOperationResult.ClientException
+  name: ClientException
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ClientException
+  commentId: P:BaseClients.Core.ServiceOperationResult.ClientException
+  fullName: BaseClients.Core.ServiceOperationResult.ClientException
+  nameWithType: ServiceOperationResult.ClientException
+- uid: BaseClients.Core.ServiceOperationResult.ClientException*
+  name: ClientException
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ClientException_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.ClientException
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.ClientException
+  nameWithType: ServiceOperationResult.ClientException
+- uid: BaseClients.Core.ServiceOperationResult.Equals(System.Object)
+  name: Equals(Object)
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_Equals_System_Object_
+  commentId: M:BaseClients.Core.ServiceOperationResult.Equals(System.Object)
+  fullName: BaseClients.Core.ServiceOperationResult.Equals(System.Object)
+  nameWithType: ServiceOperationResult.Equals(Object)
+- uid: BaseClients.Core.ServiceOperationResult.Equals*
+  name: Equals
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_Equals_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.Equals
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.Equals
+  nameWithType: ServiceOperationResult.Equals
+- uid: BaseClients.Core.ServiceOperationResult.FromClientException(System.Exception)
+  name: FromClientException(Exception)
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_FromClientException_System_Exception_
+  commentId: M:BaseClients.Core.ServiceOperationResult.FromClientException(System.Exception)
+  fullName: BaseClients.Core.ServiceOperationResult.FromClientException(System.Exception)
+  nameWithType: ServiceOperationResult.FromClientException(Exception)
+- uid: BaseClients.Core.ServiceOperationResult.FromClientException*
+  name: FromClientException
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_FromClientException_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.FromClientException
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.FromClientException
+  nameWithType: ServiceOperationResult.FromClientException
+- uid: BaseClients.Core.ServiceOperationResult.GetHashCode
+  name: GetHashCode()
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_GetHashCode
+  commentId: M:BaseClients.Core.ServiceOperationResult.GetHashCode
+  fullName: BaseClients.Core.ServiceOperationResult.GetHashCode()
+  nameWithType: ServiceOperationResult.GetHashCode()
+- uid: BaseClients.Core.ServiceOperationResult.GetHashCode*
+  name: GetHashCode
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_GetHashCode_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.GetHashCode
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.GetHashCode
+  nameWithType: ServiceOperationResult.GetHashCode
+- uid: BaseClients.Core.ServiceOperationResult.IsClientError
+  name: IsClientError
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_IsClientError
+  commentId: P:BaseClients.Core.ServiceOperationResult.IsClientError
+  fullName: BaseClients.Core.ServiceOperationResult.IsClientError
+  nameWithType: ServiceOperationResult.IsClientError
+- uid: BaseClients.Core.ServiceOperationResult.IsClientError*
+  name: IsClientError
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_IsClientError_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.IsClientError
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.IsClientError
+  nameWithType: ServiceOperationResult.IsClientError
+- uid: BaseClients.Core.ServiceOperationResult.IsServiceError
+  name: IsServiceError
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_IsServiceError
+  commentId: P:BaseClients.Core.ServiceOperationResult.IsServiceError
+  fullName: BaseClients.Core.ServiceOperationResult.IsServiceError
+  nameWithType: ServiceOperationResult.IsServiceError
+- uid: BaseClients.Core.ServiceOperationResult.IsServiceError*
+  name: IsServiceError
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_IsServiceError_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.IsServiceError
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.IsServiceError
+  nameWithType: ServiceOperationResult.IsServiceError
+- uid: BaseClients.Core.ServiceOperationResult.IsSuccessfull
+  name: IsSuccessfull
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_IsSuccessfull
+  commentId: P:BaseClients.Core.ServiceOperationResult.IsSuccessfull
+  fullName: BaseClients.Core.ServiceOperationResult.IsSuccessfull
+  nameWithType: ServiceOperationResult.IsSuccessfull
+- uid: BaseClients.Core.ServiceOperationResult.IsSuccessfull*
+  name: IsSuccessfull
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_IsSuccessfull_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.IsSuccessfull
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.IsSuccessfull
+  nameWithType: ServiceOperationResult.IsSuccessfull
+- uid: BaseClients.Core.ServiceOperationResult.op_Equality(BaseClients.Core.ServiceOperationResult,System.Boolean)
+  name: Equality(ServiceOperationResult, Boolean)
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_op_Equality_BaseClients_Core_ServiceOperationResult_System_Boolean_
+  commentId: M:BaseClients.Core.ServiceOperationResult.op_Equality(BaseClients.Core.ServiceOperationResult,System.Boolean)
+  fullName: BaseClients.Core.ServiceOperationResult.Equality(BaseClients.Core.ServiceOperationResult, System.Boolean)
+  nameWithType: ServiceOperationResult.Equality(ServiceOperationResult, Boolean)
+- uid: BaseClients.Core.ServiceOperationResult.op_Equality*
+  name: Equality
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_op_Equality_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.op_Equality
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.Equality
+  nameWithType: ServiceOperationResult.Equality
+- uid: BaseClients.Core.ServiceOperationResult.op_Inequality(BaseClients.Core.ServiceOperationResult,System.Boolean)
+  name: Inequality(ServiceOperationResult, Boolean)
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_op_Inequality_BaseClients_Core_ServiceOperationResult_System_Boolean_
+  commentId: M:BaseClients.Core.ServiceOperationResult.op_Inequality(BaseClients.Core.ServiceOperationResult,System.Boolean)
+  fullName: BaseClients.Core.ServiceOperationResult.Inequality(BaseClients.Core.ServiceOperationResult, System.Boolean)
+  nameWithType: ServiceOperationResult.Inequality(ServiceOperationResult, Boolean)
+- uid: BaseClients.Core.ServiceOperationResult.op_Inequality*
+  name: Inequality
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_op_Inequality_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.op_Inequality
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.Inequality
+  nameWithType: ServiceOperationResult.Inequality
+- uid: BaseClients.Core.ServiceOperationResult.ServiceCode
+  name: ServiceCode
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ServiceCode
+  commentId: P:BaseClients.Core.ServiceOperationResult.ServiceCode
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceCode
+  nameWithType: ServiceOperationResult.ServiceCode
+- uid: BaseClients.Core.ServiceOperationResult.ServiceCode*
+  name: ServiceCode
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ServiceCode_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.ServiceCode
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceCode
+  nameWithType: ServiceOperationResult.ServiceCode
+- uid: BaseClients.Core.ServiceOperationResult.ServiceException
+  name: ServiceException
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ServiceException
+  commentId: P:BaseClients.Core.ServiceOperationResult.ServiceException
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceException
+  nameWithType: ServiceOperationResult.ServiceException
+- uid: BaseClients.Core.ServiceOperationResult.ServiceException*
+  name: ServiceException
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ServiceException_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.ServiceException
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceException
+  nameWithType: ServiceOperationResult.ServiceException
+- uid: BaseClients.Core.ServiceOperationResult.ServiceString
+  name: ServiceString
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ServiceString
+  commentId: P:BaseClients.Core.ServiceOperationResult.ServiceString
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceString
+  nameWithType: ServiceOperationResult.ServiceString
+- uid: BaseClients.Core.ServiceOperationResult.ServiceString*
+  name: ServiceString
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ServiceString_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.ServiceString
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.ServiceString
+  nameWithType: ServiceOperationResult.ServiceString
+- uid: BaseClients.Core.ServiceOperationResult.ToString
+  name: ToString()
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ToString
+  commentId: M:BaseClients.Core.ServiceOperationResult.ToString
+  fullName: BaseClients.Core.ServiceOperationResult.ToString()
+  nameWithType: ServiceOperationResult.ToString()
+- uid: BaseClients.Core.ServiceOperationResult.ToString*
+  name: ToString
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ToString_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.ToString
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.ToString
+  nameWithType: ServiceOperationResult.ToString
+- uid: BaseClients.Core.ServiceOperationResult.ToSummaryString
+  name: ToSummaryString()
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ToSummaryString
+  commentId: M:BaseClients.Core.ServiceOperationResult.ToSummaryString
+  fullName: BaseClients.Core.ServiceOperationResult.ToSummaryString()
+  nameWithType: ServiceOperationResult.ToSummaryString()
+- uid: BaseClients.Core.ServiceOperationResult.ToSummaryString*
+  name: ToSummaryString
+  href: api/BaseClients.Core.ServiceOperationResult.html#BaseClients_Core_ServiceOperationResult_ToSummaryString_
+  commentId: Overload:BaseClients.Core.ServiceOperationResult.ToSummaryString
+  isSpec: "True"
+  fullName: BaseClients.Core.ServiceOperationResult.ToSummaryString
+  nameWithType: ServiceOperationResult.ToSummaryString
