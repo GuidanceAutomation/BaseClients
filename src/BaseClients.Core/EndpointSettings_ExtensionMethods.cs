@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	public static class EndpointSettings_ExtensionMethods
 	{

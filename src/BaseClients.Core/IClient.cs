@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel;
 using System.ServiceModel;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	public interface IClient : IDisposable, INotifyPropertyChanged
 	{

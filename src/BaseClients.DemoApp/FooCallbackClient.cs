@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BaseClients;
-using System.Threading.Tasks;
-using System.ComponentModel;
-using System.ServiceModel;
+﻿using BaseClients.Core;
 using NLog;
+using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.ServiceModel;
 
 namespace BaseClients.DemoApp
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	/// <summary>
 	/// A simple struct for representing an ip address and associated ports used for http, tcp and udp communication.

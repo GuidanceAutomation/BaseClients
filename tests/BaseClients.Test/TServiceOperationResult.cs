@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using System.Threading.Tasks;
+using BaseClients.Core;
 
 namespace BaseClients.Test
 {

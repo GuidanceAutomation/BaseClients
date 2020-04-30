@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	public interface ICallbackClient : IClient
 	{

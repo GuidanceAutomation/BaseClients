@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	public struct ServiceOperationResult
 	{

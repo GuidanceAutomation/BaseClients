@@ -3,7 +3,7 @@ using System;
 using System.ServiceModel;
 using System.Threading;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	public abstract class AbstractCallbackClient<T> : AbstractClient<T>, ICallbackClient
 	{

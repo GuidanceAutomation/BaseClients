@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	public abstract class AbstractConsoleOption<T> where T:IClient
 	{

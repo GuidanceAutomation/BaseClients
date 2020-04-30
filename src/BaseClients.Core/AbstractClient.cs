@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.ServiceModel;
 
-namespace BaseClients
+namespace BaseClients.Core
 {
 	public abstract class AbstractClient<T> : IClient
 	{

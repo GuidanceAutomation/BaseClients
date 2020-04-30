@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Net;
+using BaseClients.Core;
 
 namespace BaseClients.Test
 {
