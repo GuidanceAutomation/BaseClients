@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Controls.IsConnectedControl.html",
-          "hash": "QQJ2lopfcMdOvbisn1xIQQ=="
+          "hash": "hhTJhtbpiZvua+rRA35nuQ=="
         }
       },
       "is_incremental": false,
@@ -262,7 +262,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 11,
-          "skipped_file_count": 11
+          "skipped_file_count": 10
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
