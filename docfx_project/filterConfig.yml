@@ -14,3 +14,6 @@ apiRules:
 - exclude:
       uidRegex: ^System\.Windows\.Media\.Visual
       type: Type 
+- exclude:
+      uidRegex: ^System\.Windows\.DependencyObject
+      type: Type 
