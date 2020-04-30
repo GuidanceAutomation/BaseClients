@@ -11,17 +11,13 @@ namespace BaseClients.Core
 
 		protected AutoResetEvent heartbeatReset = new AutoResetEvent(false);
 
-		private readonly Guid key = Guid.NewGuid();
-
 		private Thread hearbeatThread;
 
 		private bool isConnected = false;
 
 		private bool isDisposed = false;
 
-		private Logger logger = LogManager.CreateNullLogger();
-
-		private bool terminate = false;
+		private readonly Logger logger = LogManager.CreateNullLogger();
 
 		public AbstractCallbackClient(Uri netTcpUri, NetTcpBinding binding = null)
 			: base(netTcpUri, binding)
@@ -66,9 +62,9 @@ namespace BaseClients.Core
 			}
 		}
 
-		public Guid Key { get { return key; } }
+		public Guid Key { get; } = Guid.NewGuid();
 
-		protected bool Terminate => terminate;
+		protected bool Terminate { get; private set; } = false;
 
 		protected new DuplexChannelFactory<T> CreateChannelFactory()
 			=> new DuplexChannelFactory<T>(context, binding, EndpointAddress);
@@ -77,7 +73,7 @@ namespace BaseClients.Core
 		{
 			if (isDisposed) return;
 
-			terminate = true;
+			Terminate = true;
 			heartbeatReset.Set();
 			hearbeatThread.Join();
 

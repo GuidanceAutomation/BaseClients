@@ -10,8 +10,6 @@ namespace BaseClients.Core
 	{
 		protected readonly NetTcpBinding binding;
 
-		private readonly EndpointAddress endpointAddress;
-
 		private bool isDisposed = false;
 
 		private Exception lastCaughtException = null;
@@ -20,7 +18,7 @@ namespace BaseClients.Core
 
 		public AbstractClient(Uri netTcpUri, NetTcpBinding binding = null)
 		{
-			this.endpointAddress = new EndpointAddress(netTcpUri);
+			this.EndpointAddress = new EndpointAddress(netTcpUri);
 
 			if (binding == null)
 			{
@@ -37,7 +35,7 @@ namespace BaseClients.Core
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public EndpointAddress EndpointAddress => endpointAddress;
+		public EndpointAddress EndpointAddress { get; }
 
 		/// <summary>
 		/// Last caught exception handled by the client
@@ -75,7 +73,7 @@ namespace BaseClients.Core
 
 				logger = value;
 				logger.Info("Binding:{0} PortSharing:{1}", binding.Name, binding.PortSharingEnabled);
-				logger.Info("Endpoint Address:{0}", endpointAddress);
+				logger.Info("Endpoint Address:{0}", EndpointAddress);
 			}
 		}
 
@@ -85,7 +83,7 @@ namespace BaseClients.Core
 		}
 
 		protected ChannelFactory<T> CreateChannelFactory()
-		 => new ChannelFactory<T>(binding, endpointAddress);
+		 => new ChannelFactory<T>(binding, EndpointAddress);
 
 		protected virtual void Dispose(bool isDisposing)
 		{
