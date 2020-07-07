@@ -17,6 +17,6 @@ namespace BaseClients.Architecture
 		/// <summary>
 		/// Logger for debugging / monitoring
 		/// </summary>
-		Logger Logger { get; set; }
+		ILogger Logger { get; set; }
 	}
 }

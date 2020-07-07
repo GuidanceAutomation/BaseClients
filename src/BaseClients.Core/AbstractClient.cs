@@ -18,7 +18,7 @@ namespace BaseClients.Core
 
 		private Exception lastCaughtException = null;
 
-		private Logger logger = LogManager.CreateNullLogger();
+		private ILogger logger = LogManager.CreateNullLogger();
 
 		public AbstractClient(Uri netTcpUri, NetTcpBinding binding = null)
 		{
@@ -34,8 +34,6 @@ namespace BaseClients.Core
 		{
 			Dispose(false);
 		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
 
 		public EndpointAddress EndpointAddress { get; }
 
@@ -63,7 +61,7 @@ namespace BaseClients.Core
 			}
 		}
 
-		public Logger Logger
+		public ILogger Logger
 		{
 			get { return logger; }
 

@@ -37,7 +37,7 @@ namespace BaseClients.DemoApp
 
 		public Exception LastCaughtException => throw new NotImplementedException();
 
-		public Logger Logger { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+		public ILogger Logger { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
 		public event Action<DateTime> Connected;
 
