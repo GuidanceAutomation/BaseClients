@@ -3,9 +3,9 @@ using System;
 using System.ComponentModel;
 using System.ServiceModel;
 
-namespace BaseClients.Core
+namespace BaseClients.Architecture
 {
-	public interface IClient : IDisposable, INotifyPropertyChanged
+	public interface IClient : IDisposable
 	{
 		/// <summary>
 		/// Endpoint address of the service host

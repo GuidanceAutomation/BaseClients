@@ -5,6 +5,8 @@ using System.Text;
 using NUnit.Framework;
 using System.Threading.Tasks;
 using BaseClients.Core;
+using GAAPICommon.Core;
+using GAAPICommon.Core.Dtos;
 
 namespace BaseClients.Test
 {
@@ -17,10 +19,8 @@ namespace BaseClients.Test
 		{
 			ArgumentNullException nullEx = new ArgumentNullException("oak nuggins");
 
-			ServiceOperationResult result = ServiceOperationResult.FromClientException(nullEx);
+			ServiceCallResultDto result = ServiceCallResultFactory.FromClientException(nullEx);
 
-			Assert.IsTrue(result.IsClientError);
-			Assert.IsFalse(result.IsSuccessfull);
 		}
 	}
 }

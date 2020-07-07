@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BaseClients.Architecture;
+using System;
+using GAAPICommon.Core.Dtos;
+using GAAPICommon.Core;
 
 namespace BaseClients.Core
 {
-	public abstract class AbstractConsoleOption<T> where T:IClient
+	public abstract class AbstractConsoleOption<T> where T: IClient
 	{
-		public ServiceOperationResult ExecuteOption(T client)
+		public ServiceCallResultDto ExecuteOption(T client)
 		{
-			ServiceOperationResult result;
+			ServiceCallResultDto result;
 
 			try
 			{
@@ -19,14 +18,14 @@ namespace BaseClients.Core
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex.Message);
-				result = ServiceOperationResult.FromClientException(ex);
+				return ServiceCallResultFactory.FromClientException(ex);
 			}
 
-			if (!result.IsSuccessfull) Console.WriteLine(result);
+			if (result.ServiceCode != 0) Console.WriteLine(result);
 
 			return result;
 		}
 
-		protected abstract ServiceOperationResult HandleExecution(T client);
+		protected abstract ServiceCallResultDto HandleExecution(T client);
 	}
 }

@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using BaseClients.Architecture;
+using NLog;
 using System;
 using System.ServiceModel;
 using System.Threading;
@@ -11,7 +12,7 @@ namespace BaseClients.Core
 
 		protected AutoResetEvent heartbeatReset = new AutoResetEvent(false);
 
-		private Thread hearbeatThread;
+		private readonly Thread hearbeatThread;
 
 		private bool isConnected = false;
 
@@ -46,18 +47,13 @@ namespace BaseClients.Core
 				if (isConnected != value)
 				{
 					isConnected = value;
-					OnNotifyPropertyChanged();
 
 					Logger.Debug("IsConnected: {0}", value);
 
-					if (value)
-					{
-						OnConnected(DateTime.Now);
-					}
-					else
-					{
+					if (value)					
+						OnConnected(DateTime.Now);					
+					else	
 						OnDisconnected(DateTime.Now);
-					}
 				}
 			}
 		}

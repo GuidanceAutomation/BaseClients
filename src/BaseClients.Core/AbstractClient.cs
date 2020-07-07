@@ -1,6 +1,10 @@
-﻿using NLog;
+﻿using BaseClients.Architecture;
+using GAAPICommon.Core;
+using GAAPICommon.Core.Dtos;
+using NLog;
 using System;
 using System.ComponentModel;
+using System.Dynamic;
 using System.Runtime.CompilerServices;
 using System.ServiceModel;
 
@@ -18,12 +22,10 @@ namespace BaseClients.Core
 
 		public AbstractClient(Uri netTcpUri, NetTcpBinding binding = null)
 		{
-			this.EndpointAddress = new EndpointAddress(netTcpUri);
+			EndpointAddress = new EndpointAddress(netTcpUri);
 
 			if (binding == null)
-			{
 				binding = new NetTcpBinding(SecurityMode.None) { PortSharingEnabled = true };
-			}
 
 			this.binding = binding;
 		}
@@ -57,8 +59,6 @@ namespace BaseClients.Core
 					{
 						Logger.Error(value);
 					}
-
-					OnNotifyPropertyChanged();
 				}
 			}
 		}
@@ -92,19 +92,11 @@ namespace BaseClients.Core
 			isDisposed = true;
 		}
 
-		protected ServiceOperationResult HandleClientException(Exception ex)
+		protected ServiceCallResultDto HandleClientException(Exception ex)
 		{
 			LastCaughtException = ex;
 			Logger.Error(ex);
-			return ServiceOperationResult.FromClientException(ex);
-		}
-
-		protected void OnNotifyPropertyChanged([CallerMemberName] String propertyName = "")
-		{
-			if (PropertyChanged != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
+			return ServiceCallResultFactory.FromClientException(ex);
 		}
 	}
 }

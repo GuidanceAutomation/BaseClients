@@ -1,4 +1,5 @@
-﻿using BaseClients.Core;
+﻿using BaseClients.Architecture;
+using BaseClients.Core;
 using NLog;
 using System;
 using System.ComponentModel;
