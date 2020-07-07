@@ -2,14 +2,15 @@
 using System;
 using GAAPICommon.Core.Dtos;
 using GAAPICommon.Core;
+using GAAPICommon.Architecture;
 
 namespace BaseClients.Core
 {
 	public abstract class AbstractConsoleOption<T> where T: IClient
 	{
-		public ServiceCallResultDto ExecuteOption(T client)
+		public IServiceCallResult ExecuteOption(T client)
 		{
-			ServiceCallResultDto result;
+			IServiceCallResult result;
 
 			try
 			{
@@ -26,6 +27,6 @@ namespace BaseClients.Core
 			return result;
 		}
 
-		protected abstract ServiceCallResultDto HandleExecution(T client);
+		protected abstract IServiceCallResult HandleExecution(T client);
 	}
 }

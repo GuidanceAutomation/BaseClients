@@ -1,6 +1,5 @@
 ﻿using NLog;
 using System;
-using System.ComponentModel;
 using System.ServiceModel;
 
 namespace BaseClients.Architecture
