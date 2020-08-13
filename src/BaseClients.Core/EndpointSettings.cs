@@ -1,48 +1,31 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 
 namespace BaseClients.Core
 {
-	/// <summary>
-	/// A simple struct for representing an ip address and associated ports used for http, tcp and udp communication.
-	/// </summary>
-	public struct EndpointSettings
-	{
-		public const UInt16 DEFAULTHTTPPORT = 41916;
+    /// <summary>
+    /// A simple struct for representing an ip address and associated ports used for http, tcp and udp communication.
+    /// </summary>
+    public class EndpointSettings
+    {
+        public EndpointSettings(IPAddress ipAddress = default(IPAddress), ushort httpPort = 41916, ushort tcpPort = 41917, ushort udpPort = 41918)
+        {
+            IPAddress = ipAddress ?? IPAddress.Loopback;
+            HttpPort = httpPort;
+            TcpPort = tcpPort;
+            UdpPort = udpPort;
+        }
 
-		public const UInt16 DEFAULTTCPPORT = 41917;
+        public ushort HttpPort { get; private set; } = 41916;
 
-		public const UInt16 DEFAULTUDPPORT = 41918;
+        public IPAddress IPAddress { get; private set; } = IPAddress.Loopback;
 
-		private readonly UInt16? httpPort;
+        public ushort TcpPort { get; private set; } = 41917;
 
-		private readonly IPAddress ipAddress;
+        public ushort UdpPort { get; private set; } = 41918;
 
-		private readonly UInt16? tcpPort;
+        public override string ToString() => ToSummaryString();
 
-		private readonly UInt16? udpPort;
-
-		public EndpointSettings(IPAddress ipAddress = default(IPAddress), UInt16 httpPort = DEFAULTHTTPPORT, UInt16 tcpPort = DEFAULTTCPPORT, UInt16 udpPort = DEFAULTUDPPORT)
-		{
-			if (ipAddress == null) throw new ArgumentNullException("ipAddress");
-
-			this.ipAddress = ipAddress;
-			this.httpPort = httpPort;
-			this.tcpPort = tcpPort;
-			this.udpPort = udpPort;
-		}
-
-		public UInt16 HttpPort => httpPort == null ? EndpointSettings.DEFAULTHTTPPORT : (UInt16)httpPort;
-
-		public IPAddress IPAddress => ipAddress == null ? IPAddress.Loopback : ipAddress;
-
-		public UInt16 TcpPort => tcpPort == null ? EndpointSettings.DEFAULTTCPPORT : (UInt16)tcpPort;
-
-		public UInt16 UdpPort => udpPort == null ? EndpointSettings.DEFAULTUDPPORT : (UInt16)udpPort;
-
-		public override string ToString() => ToSummaryString();
-
-		public string ToSummaryString()
-			=> string.Format("IPAddress:{0} Ports: Http:{1} Tcp:{2}, Udp:{3}", IPAddress, HttpPort, TcpPort, UdpPort);
-	}
+        public string ToSummaryString()
+            => ($"IPAddress:{IPAddress} Ports: Http:{HttpPort} Tcp:{TcpPort}, Udp:{UdpPort}");
+    }
 }

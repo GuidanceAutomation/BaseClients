@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{695493A0-223E-4963-98FC-40AA8C0F958E}</ProjectGuid>
+    <ProjectGuid>{30B181DE-E99E-47E8-89A2-63CF4E56321B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BaseClients.Core</RootNamespace>
-    <AssemblyName>BaseClients.Core</AssemblyName>
+    <RootNamespace>BaseClients.Architecture</RootNamespace>
+    <AssemblyName>BaseClients.Architecture</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,15 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
-    </Reference>
-    <Reference Include="GAAPICommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.2.2\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="MoreLinq, Version=3.3.2.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\morelinq.3.3.2\lib\net451\MoreLinq.dll</HintPath>
-    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NLog.4.7.3\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -50,9 +41,6 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,22 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractCallbackClient.cs" />
-    <Compile Include="AbstractClient.cs" />
-    <Compile Include="AbstractConsoleOption.cs" />
-    <Compile Include="EndpointSettings.cs" />
-    <Compile Include="EndpointSettings_ExtensionMethods.cs" />
+    <Compile Include="ICallbackClient.cs" />
+    <Compile Include="IClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BaseClients.Architecture\BaseClients.Architecture.csproj">
-      <Project>{30b181de-e99e-47e8-89a2-63cf4e56321b}</Project>
-      <Name>BaseClients.Architecture</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
