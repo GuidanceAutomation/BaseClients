@@ -15,9 +15,9 @@ namespace BaseClients.Test
 			EndpointSettings settings = new EndpointSettings();
 
 			Assert.AreEqual(IPAddress.Loopback, settings.IPAddress);
-			Assert.AreEqual(EndpointSettings.DEFAULTHTTPPORT, settings.HttpPort);
-			Assert.AreEqual(EndpointSettings.DEFAULTTCPPORT, settings.TcpPort);
-			Assert.AreEqual(EndpointSettings.DEFAULTUDPPORT, settings.UdpPort);
+			Assert.AreEqual(41916, settings.HttpPort);
+			Assert.AreEqual(41917, settings.TcpPort);
+			Assert.AreEqual(41918, settings.UdpPort);
 		}
 
 		/// <summary>
@@ -28,9 +28,9 @@ namespace BaseClients.Test
 		{
 			IPAddress ipAddress = IPAddress.Parse("192.168.1.1");
 
-			UInt16 httpPort = 1;
-			UInt16 tcpPort = 2;
-			UInt16 udpPort = 3;
+            ushort httpPort = 1;
+            ushort tcpPort = 2;
+            ushort udpPort = 3;
 
 			EndpointSettings settings = new EndpointSettings(ipAddress, httpPort, tcpPort, udpPort);
 
