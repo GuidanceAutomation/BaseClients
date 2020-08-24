@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>BaseClients</id>
-    <version>2.0.0-alpha03</version>
+    <version>2.0.0-alpha07</version>
     <authors>Martin Davies, Callum Clarke</authors>
     <owners>Guidance Automation Ltd</owners>
 	<license type="expression">MIT</license>

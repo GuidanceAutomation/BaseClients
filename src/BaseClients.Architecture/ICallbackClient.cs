@@ -11,5 +11,7 @@ namespace BaseClients.Architecture
         bool IsConnected { get; }
 
         Guid Key { get; }
+
+        TimeSpan Heartbeat { get; }
     }
 }
