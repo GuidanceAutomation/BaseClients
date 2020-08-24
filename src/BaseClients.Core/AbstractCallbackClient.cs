@@ -1,4 +1,7 @@
 ﻿using BaseClients.Architecture;
+using GAAPICommon.Architecture;
+using GAAPICommon.Core;
+using GAAPICommon.Core.Dtos;
 using MoreLinq;
 using NLog;
 using System;
@@ -113,6 +116,58 @@ namespace BaseClients.Core
         public Guid Key { get; } = Guid.NewGuid();
 
         protected bool Terminate { get; private set; } = false;
+
+        /// <summary>
+        /// Handles an API call that returns an IServiceCallResult
+        /// </summary>
+        /// <param name="apiCall">Method the handles the channel call</param>
+        protected new IServiceCallResult HandleAPICall(Func<T, ServiceCallResultDto> apiCall)
+        {
+            try
+            {
+                using (DuplexChannelFactory<T> channelFactory = CreateChannelFactory())
+                {
+                    T channel = channelFactory.CreateChannel();
+                    ServiceCallResultDto result = apiCall(channel);
+                    channelFactory.Close();
+
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+                LastCaughtException = ex;
+                return ServiceCallResultFactory.FromClientException(ex);
+            }
+        }
+
+        /// <summary>
+        /// Handles an API call that returns a value of type T
+        /// </summary>
+        /// <typeparam name="T">Dto type to be returned</typeparam>
+        /// <param name="apiCall">Method the handles the channel call</param>
+        protected new IServiceCallResult<U> HandleAPICall<U>(Func<T, ServiceCallResultDto<U>> apiCall)
+        {
+            try
+            {
+                using (DuplexChannelFactory<T> channelFactory = CreateChannelFactory())
+                {
+                    T channel = channelFactory.CreateChannel();
+                    ServiceCallResultDto<U> result = apiCall(channel);
+                    channelFactory.Close();
+
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+                LastCaughtException = ex;
+                return ServiceCallResultFactory<U>.FromClientException(ex);
+            }
+        }
+
 
         protected new DuplexChannelFactory<T> CreateChannelFactory()
             => new DuplexChannelFactory<T>(context, binding, EndpointAddress);
