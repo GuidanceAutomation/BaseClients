@@ -169,7 +169,7 @@ namespace BaseClients.Core
         }
 
 
-        protected new DuplexChannelFactory<T> CreateChannelFactory()
+        private DuplexChannelFactory<T> CreateChannelFactory()
             => new DuplexChannelFactory<T>(context, binding, EndpointAddress);
 
         protected override void Dispose(bool isDisposing)

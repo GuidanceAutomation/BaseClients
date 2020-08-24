@@ -125,7 +125,7 @@ namespace BaseClients.Core
             Dispose(true);
         }
 
-        protected ChannelFactory<T> CreateChannelFactory()
+        private ChannelFactory<T> CreateChannelFactory()
             => new ChannelFactory<T>(binding, EndpointAddress);
 
         protected virtual void Dispose(bool isDisposing)
