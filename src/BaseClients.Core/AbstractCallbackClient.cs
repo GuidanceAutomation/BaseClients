@@ -22,10 +22,12 @@ namespace BaseClients.Core
 
         private readonly Logger logger = LogManager.CreateNullLogger();
 
-        public AbstractCallbackClient(Uri netTcpUri, NetTcpBinding binding = null)
+        public AbstractCallbackClient(Uri netTcpUri, TimeSpan heartbeat = default, NetTcpBinding binding = null)
             : base(netTcpUri, binding)
         {
             SetInstanceContext();
+
+            Heartbeat = heartbeat < TimeSpan.FromMilliseconds(1000) ? TimeSpan.FromMilliseconds(1000) : heartbeat;
 
             hearbeatThread = new Thread(new ThreadStart(HeartbeatThread));
             hearbeatThread.Start();
@@ -60,6 +62,54 @@ namespace BaseClients.Core
             }
         }
 
+        protected abstract void HandleSubscriptionHeartbeat(T channel, Guid key);
+
+        private void HeartbeatThread()
+        {
+            Logger.Trace("HeartbeatThread()");
+
+            ChannelFactory<T> channelFactory = CreateChannelFactory();
+            T channel = channelFactory.CreateChannel();
+
+            while (!Terminate)
+            {
+                bool exceptionCaught = false;
+
+                try
+                {
+                    Logger.Trace("SubscriptionHeartbeat({0})", Key);
+                    HandleSubscriptionHeartbeat(channel, Key);
+                    IsConnected = true;
+                }
+                catch (EndpointNotFoundException)
+                {
+                    Logger.Warn("HeartbeatThread - EndpointNotFoundException. Is the server running?");
+                    exceptionCaught = true;
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error(ex);
+                    LastCaughtException = ex;
+                    exceptionCaught = true;
+                }
+
+                if (exceptionCaught == true)
+                {
+                    channelFactory.Abort();
+                    IsConnected = false;
+
+                    channelFactory = CreateChannelFactory(); // Create a new channel as this one is dead
+                    channel = channelFactory.CreateChannel();
+                }
+
+                heartbeatReset.WaitOne(Heartbeat);
+            }
+
+            Logger.Trace("HeartbeatThread exit");
+        }
+
+        public TimeSpan Heartbeat { get; private set; }
+
         public Guid Key { get; } = Guid.NewGuid();
 
         protected bool Terminate { get; private set; } = false;
@@ -79,8 +129,6 @@ namespace BaseClients.Core
 
             isDisposed = true;
         }
-
-        protected abstract void HeartbeatThread();
 
         protected abstract void SetInstanceContext();
 

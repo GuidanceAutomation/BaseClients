@@ -46,7 +46,8 @@ namespace BaseClients.Core
                 return ServiceCallResultFactory.FromClientException(ex);
             }
 
-            if (result.ServiceCode != 0) Console.WriteLine(result);
+            if (result.ServiceCode != 0)
+                Console.WriteLine(result);
 
             return result;
         }
