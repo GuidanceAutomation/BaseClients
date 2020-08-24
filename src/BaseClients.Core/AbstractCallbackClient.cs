@@ -1,6 +1,8 @@
 ﻿using BaseClients.Architecture;
+using MoreLinq;
 using NLog;
 using System;
+using System.Linq;
 using System.ServiceModel;
 using System.Threading;
 
@@ -86,25 +88,20 @@ namespace BaseClients.Core
         {
             Action<DateTime> handlers = Connected;
 
-            if (handlers != null)
-            {
-                foreach (Action<DateTime> handler in handlers.GetInvocationList())
-                {
-                    handler.BeginInvoke(dateTime, null, null);
-                }
-            }
+            handlers?
+                .GetInvocationList()
+                .Cast<Action<DateTime>>()
+                .ForEach(e => e.BeginInvoke(dateTime, null, null));
         }
 
         private void OnDisconnected(DateTime dateTime)
         {
             Action<DateTime> handlers = Disconnected;
-            if (handlers != null)
-            {
-                foreach (Action<DateTime> handler in handlers.GetInvocationList())
-                {
-                    handler.BeginInvoke(dateTime, null, null);
-                }
-            }
+
+            handlers?
+                .GetInvocationList()
+                .Cast<Action<DateTime>>()
+                .ForEach(e => e.BeginInvoke(dateTime, null, null));
         }
     }
 }
