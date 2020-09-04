@@ -54,7 +54,7 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/guidanceAutomation"
+      "templates/material"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",

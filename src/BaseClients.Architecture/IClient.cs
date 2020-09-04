@@ -11,10 +11,13 @@ namespace BaseClients.Architecture
         /// </summary>
         EndpointAddress EndpointAddress { get; }
 
+        /// <summary>
+        /// The last exception caught by the service. 
+        /// </summary>
         Exception LastCaughtException { get; }
 
         /// <summary>
-        /// Logger for debugging / monitoring
+        /// NLog logger for debugging / monitoring
         /// </summary>
         ILogger Logger { get; set; }
     }

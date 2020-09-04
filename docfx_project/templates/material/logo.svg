@@ -13,12 +13,12 @@
    id="Layer_1"
    x="0px"
    y="0px"
-   viewBox="0 0 50.666668 50.666668"
+   viewBox="0 0 53.333334 53.333334"
    xml:space="preserve"
    sodipodi:docname="logo.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   width="38pt"
-   height="38pt"><metadata
+   width="40pt"
+   height="40pt"><metadata
    id="metadata47"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -46,13 +46,13 @@
    inkscape:window-height="1057"
    id="namedview43"
    showgrid="false"
-   inkscape:zoom="10.794631"
-   inkscape:cx="39.960012"
-   inkscape:cy="20.194011"
-   inkscape:window-x="1912"
+   inkscape:zoom="11.313709"
+   inkscape:cx="36.457165"
+   inkscape:cy="29.90891"
+   inkscape:window-x="3832"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="Layer_1"
+   inkscape:current-layer="layer1"
    units="pt" />
 <style
    type="text/css"
@@ -68,8 +68,17 @@
 	.st8{fill:none;stroke:#C4D82E;stroke-width:7.3639;stroke-miterlimit:10;}
 </style>
 <g
+   inkscape:groupmode="layer"
+   id="layer1"
+   inkscape:label="Background"><rect
+     style="fill:#ffffff;fill-opacity:1;stroke-width:2.2184999"
+     id="rect4534"
+     width="53.326935"
+     height="53.332401"
+     x="0.0026297569"
+     y="-0.00045840454" /></g><g
    id="g884"
-   transform="matrix(0.4122028,0,0,0.4122028,-40.119671,-91.141287)"><line
+   transform="matrix(0.4122028,0,0,0.4122028,-38.915369,-89.771561)"><line
      class="st8"
      x1="159.10001"
      y1="231"
