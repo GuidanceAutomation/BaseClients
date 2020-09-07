@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Service Call Result Guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Service Call Result Guide ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="service-call-result-guide">Service Call Result Guide</h1>
+
+<p>The client wrapper libraries allow the user to make remote procedure calls on the server, without the need to understand or implement and of the underlying communications layer.</p>
+<p>Remote calls are categorized either as:</p>
+<ul>
+<li><code>void</code> calls, i.e. calls that do not return a value.</li>
+<li>value calls, i.e. calls that return a value.</li>
+</ul>
+<p>The wrapper implementation also provides functionality to diagnose faults; determine if the fault is server or client side and capture caught exceptions. This is all wrapped up in the <code>IServiceCallResult</code> object.</p>
+<h2 id="methods-returning-void">Methods returning <code>void</code></h2>
+<p>The most basic calls takes the format:</p>
+<ul>
+<li><code>IServiceCallResult DoThing();</code></li>
+<li><code>IServiceCallResult DoThingWithThisValue(T value);</code></li>
+</ul>
+<p>These calls call a method remotely on the server and optionally pass in a parameter. <code>IServiceCallResult</code> contains the result of the call with:</p>
+<pre><code>public interface IServiceCallResult
+{
+    string ExceptionMessage { get; }
+
+    string ExceptionSource { get; }
+
+    string ExceptionStackTrace { get; }
+
+    int ServiceCode { get; }
+}
+</code></pre>
+<h3 id="servicecode">ServiceCode</h3>
+<p>This value represents the success of the call without</p>
+<ul>
+<li>No Error = 0</li>
+<li>Unknown Failure = 1</li>
+<li>Unknown Exception = 2</li>
+<li>Service Not Configured = 3</li>
+<li>Client Exception = 4</li>
+</ul>
+<h4 id="no-error">No Error</h4>
+<p>This indicates the call was successfully, your method has been called on the server and the server effectively returned void.</p>
+<h4 id="unknown-failure">Unknown Failure</h4>
+<p>This indicates the call has failed and no diagnosis is available.</p>
+<h5 id="unknown-exception">Unknown Exception</h5>
+<p>This indicates the method has been called on the server, and the method has thrown an exception. There is no explicit handler setup for this exception, but the <code>ExceptionMessage</code>, <code>ExceptionSource</code> and <code>ExceptionStackTrace</code> properties will contain information on the caught exception for further analysis.</p>
+<h4 id="service-not-configured">Service Not Configured</h4>
+<p>This indicates the service is running on the server, but the service itself is not yet ready for communications. Caused by the endpoint being hosted before the object it exposes is in a usable state. Indicates the problem is server side.</p>
+<h4 id="client-exception">Client Exception</h4>
+<p>This indicates the problem is client side, i.e. the call has not reached the server. Typically caused by incorrect endpoint settings (i.e. the server IP address is wrong, or the server is not running).</p>
+<h3 id="custom-service-codes">Custom Service Codes</h3>
+<p>If the method call on the server fails for a known reason, a custom service code (a value of 10 or greater) may be returned instead. Exception data (<code>ExceptionMessage</code>, <code>ExceptionSource</code> and <code>ExceptionStackTrace</code>) may or may not be provided. Using the <a href="https://github.com/GuidanceAutomation/ServiceCodeSupport">ServiceCodeSupport</a> package this can be diagnosed further.</p>
+<p>E.g. using the job builder client call:</p>
+<pre><code>IServiceCallResult IssueIPAddressDirective(int taskId, string parameterAlias, IPAddress value);
+</code></pre>
+<p>with an invalid taskId, returns the Service Code 1001, which enumerates to <code>JobBuilder_Task_Id_Invalid</code>.</p>
+<h2 id="methods-returning-a-value">Methods returning a value</h2>
+<p>Value calls take the form:</p>
+<ul>
+<li><code>IServiceCallResult&lt;T&gt; GetThing();</code></li>
+<li><code>IServiceCallResult&lt;T&gt; DoThingAndReturnResult(U value);</code></li>
+</ul>
+<p>Where <code>IServiceCallResult&lt;T&gt;</code> is a generic:</p>
+<pre><code>public interface IServiceCallResult&lt;T&gt; : IServiceCallResult
+{
+    T Value { get; }
+}
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If the call is successful (i.e. <code>ServiceCode == 0</code>) then the <code>Value</code> property contains the returned value. If the call is unsuccessful the value property with be <code>default(T)</code>.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>The success of the call (i.e. the service code) should always be validated before using the returned value.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/docfx_project/articles/serviceCallResultGuide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

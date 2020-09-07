@@ -23,14 +23,20 @@ namespace BaseClients.Core
 
         private bool isDisposed = false;
 
-        private readonly Logger logger = LogManager.CreateNullLogger();
-
+        /// <summary>
+        /// Primary constructor.
+        /// </summary>
+        /// <param name="netTcpUri">.net tcp uri of the server side endpoint.</param>
+        /// <param name="heartbeat">Interval between registration (keep-alive) for callbacks.</param>
+        /// <param name="binding">Transport and security binding settings.</param>
         public AbstractCallbackClient(Uri netTcpUri, TimeSpan heartbeat = default, NetTcpBinding binding = null)
             : base(netTcpUri, binding)
         {
             SetInstanceContext();
 
-            Heartbeat = heartbeat < TimeSpan.FromMilliseconds(1000) ? TimeSpan.FromMilliseconds(1000) : heartbeat;
+            Heartbeat = heartbeat < TimeSpan.FromMilliseconds(1000) 
+                ? TimeSpan.FromMilliseconds(1000)
+                : heartbeat;
 
             hearbeatThread = new Thread(new ThreadStart(HeartbeatThread));
             hearbeatThread.Start();
@@ -41,10 +47,19 @@ namespace BaseClients.Core
             Dispose(false);
         }
 
+        /// <summary>
+        /// Fired whenever a callback client successfully registers with the server.
+        /// </summary>
         public event Action<DateTime> Connected;
 
+        /// <summary>
+        /// Fired whenever a callback client fails to register or maintain its registration with the server. 
+        /// </summary>
         public event Action<DateTime> Disconnected;
 
+        /// <summary>
+        /// True if the client has made a successful registration attempt. 
+        /// </summary>
         public bool IsConnected
         {
             get { return isConnected; }
@@ -65,6 +80,11 @@ namespace BaseClients.Core
             }
         }
 
+        /// <summary>
+        /// Abstract implementation of callback registration. 
+        /// </summary>
+        /// <param name="channel">Channel to use for communication</param>
+        /// <param name="key">Unique client identifier</param>
         protected abstract void HandleSubscriptionHeartbeat(T channel, Guid key);
 
         private void HeartbeatThread()
@@ -111,10 +131,19 @@ namespace BaseClients.Core
             Logger.Trace("HeartbeatThread exit");
         }
 
+        /// <summary>
+        /// The interval between registration events.
+        /// </summary>
         public TimeSpan Heartbeat { get; private set; }
 
+        /// <summary>
+        /// Instance Id of the client. Used to uniquely identify clients to the server. 
+        /// </summary>
         public Guid Key { get; } = Guid.NewGuid();
 
+        /// <summary>
+        /// Set true to terminate all threads.
+        /// </summary>
         protected bool Terminate { get; private set; } = false;
 
         /// <summary>
@@ -174,7 +203,8 @@ namespace BaseClients.Core
 
         protected override void Dispose(bool isDisposing)
         {
-            if (isDisposed) return;
+            if (isDisposed) 
+                return;
 
             Terminate = true;
             heartbeatReset.Set();

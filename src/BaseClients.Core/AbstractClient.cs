@@ -18,14 +18,16 @@ namespace BaseClients.Core
 
         private ILogger logger = LogManager.CreateNullLogger();
 
-        public AbstractClient(Uri netTcpUri, NetTcpBinding binding = null)
+        /// <summary>
+        /// Primary constructor.
+        /// </summary>
+        /// <param name="netTcpUri">.net tcp uri of the server side endpoint.</param>
+        /// <param name="binding">Transport and security binding settings.</param>
+        public AbstractClient(Uri netTcpUri, NetTcpBinding netTcpBinding = null)
         {
             EndpointAddress = new EndpointAddress(netTcpUri);
 
-            if (binding == null)
-                binding = new NetTcpBinding(SecurityMode.None) { PortSharingEnabled = true };
-
-            this.binding = binding;
+            binding = netTcpBinding ?? new NetTcpBinding(SecurityMode.None) { PortSharingEnabled = true };
         }
 
         ~AbstractClient()
@@ -84,6 +86,9 @@ namespace BaseClients.Core
             }
         }
 
+        /// <summary>
+        /// Endpoint address of the server.
+        /// </summary>
         public EndpointAddress EndpointAddress { get; }
 
         /// <summary>
@@ -106,20 +111,25 @@ namespace BaseClients.Core
             }
         }
 
+        /// <summary>
+        /// NLog logger for diagnostics and debugging.
+        /// </summary>
         public ILogger Logger
         {
             get { return logger; }
 
             set
             {
-                if (value == null) value = LogManager.CreateNullLogger();
+                logger = value ?? LogManager.CreateNullLogger();
 
-                logger = value;
                 logger.Info("Binding:{0} PortSharing:{1}", binding.Name, binding.PortSharingEnabled);
                 logger.Info("Endpoint Address:{0}", EndpointAddress);
             }
         }
 
+        /// <summary>
+        /// Disposes of the client.
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);
