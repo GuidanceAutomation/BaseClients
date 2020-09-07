@@ -131,8 +131,14 @@
     T Value { get; }
 }
 </code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
 <p>If the call is successful (i.e. <code>ServiceCode == 0</code>) then the <code>Value</code> property contains the returned value. If the call is unsuccessful the value property with be <code>default(T)</code>.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
 <p>The success of the call (i.e. the service code) should always be validated before using the returned value.</p>
+</div>
 </article>
           </div>
           
