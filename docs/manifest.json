@@ -5,26 +5,38 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BaseClients.Controls.IsConnectedControl.yml",
+      "source_relative_path": "api/BaseClients.Architecture.ICallbackClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BaseClients.Controls.IsConnectedControl.html",
-          "hash": "hhTJhtbpiZvua+rRA35nuQ=="
+          "relative_path": "api/BaseClients.Architecture.ICallbackClient.html",
+          "hash": "22Cend0wlGFNjuhKoGxt1w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BaseClients.Controls.yml",
+      "source_relative_path": "api/BaseClients.Architecture.IClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BaseClients.Controls.html",
-          "hash": "d2mloEjuaBI0R/icho9b0A=="
+          "relative_path": "api/BaseClients.Architecture.IClient.html",
+          "hash": "owT4DfASiSdZU8ZjPIZDhA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BaseClients.Architecture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BaseClients.Architecture.html",
+          "hash": "c5v7CcsZ6JWyLkv8lZoWxA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.AbstractCallbackClient-1.html",
-          "hash": "dKFEKYC1zsF5ZKsRLuOtCg=="
+          "hash": "utcRLQROwk82ypAXQ4B2RA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.AbstractClient-1.html",
-          "hash": "Xvle0qS9WKuPBY0ADmfu3g=="
+          "hash": "ViQudE6S+WuAhZZsr3DtjQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +69,22 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.AbstractConsoleOption-1.html",
-          "hash": "VxC9lXQwT3g+HwudQ5Lliw=="
+          "hash": "hj5rv01RLL8sMhvXsKdJog=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BaseClients.Core.AbstractGenericConsoleOption-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BaseClients.Core.AbstractGenericConsoleOption-2.html",
+          "hash": "zZjw2RSew+Myns88R615ZQ=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.EndpointSettings.html",
-          "hash": "4UBSY3jjeWaT1Wi99at0cw=="
+          "hash": "U3qtc6isNCy2TjVVjVytUw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,46 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.EndpointSettings_ExtensionMethods.html",
-          "hash": "QClPcXFBDdc1uw92Ynf+hQ=="
+          "hash": "MIrpiIGrDqIVxXaqI6pfDg=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BaseClients.Core.ICallbackClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BaseClients.Core.ICallbackClient.html",
-          "hash": "VlDxJCIZDKqxBvO/toP9cg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BaseClients.Core.IClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BaseClients.Core.IClient.html",
-          "hash": "8rgi9xBA5ZCagnJQCMa2/A=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BaseClients.Core.ServiceOperationResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BaseClients.Core.ServiceOperationResult.html",
-          "hash": "iiKkqIGfLWeLgW9zVxJk7Q=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.html",
-          "hash": "yAgtGVzDZIJIwFeOFQj5NA=="
+          "hash": "FjJ87KwqaXoOIh3tGqvpvQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "YP0E9lNnV3eIL7o7x2aeyA=="
+          "hash": "+PCEkXc2QSOJmKu1h6M/3w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "f5uyY1++GuqWNeIh0FTfag=="
+          "hash": "nxwmUmAtZIV3ARVLax9UIQ=="
         }
       },
       "is_incremental": false,
@@ -165,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/about.html",
-          "hash": "dQepoiXiq+Rx/Ogqnyf4QA=="
+          "hash": "fwSlxRze53Wfp7RicRonpA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/overview.html",
-          "hash": "P4XYfTG1yGkN072BoqC3eg=="
+          "hash": "1ceUsh1Nk4zYHAjGFz7IBw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/releaseNotes.html",
-          "hash": "D1vLeJsOSGfYnuy327NqEA=="
+          "hash": "XH6XDAdTP0oxycm5KuLVvQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -224,7 +212,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Ovy9XXDVzuE9KzWqw9gBGQ=="
+          "hash": "YFrCBq+aYMxtB81jEkDQqA=="
         }
       },
       "is_incremental": false,
@@ -256,13 +244,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 5,
-          "skipped_file_count": 4
+          "skipped_file_count": 5
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 11,
-          "skipped_file_count": 11
+          "total_file_count": 10,
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -83,18 +83,14 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="BaseClients.Core.ICallbackClient.html">ICallbackClient</a></div>
-    <div><a class="xref" href="BaseClients.Core.IClient.html">IClient</a></div>
+    <div><a class="xref" href="BaseClients.Architecture.ICallbackClient.html">ICallbackClient</a></div>
+    <div><a class="xref" href="BaseClients.Architecture.IClient.html">IClient</a></div>
     <div><span class="xref">System.IDisposable</span></div>
-    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_binding">AbstractClient&lt;T&gt;.binding</a>
-    </div>
-    <div>
-      <a class="xref" href="BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_PropertyChanged">AbstractClient&lt;T&gt;.PropertyChanged</a>
     </div>
     <div>
       <a class="xref" href="BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_EndpointAddress">AbstractClient&lt;T&gt;.EndpointAddress</a>
@@ -108,18 +104,12 @@
     <div>
       <a class="xref" href="BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_Dispose">AbstractClient&lt;T&gt;.Dispose()</a>
     </div>
-    <div>
-      <a class="xref" href="BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_HandleClientException_System_Exception_">AbstractClient&lt;T&gt;.HandleClientException(Exception)</a>
-    </div>
-    <div>
-      <a class="xref" href="BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1_OnNotifyPropertyChanged_System_String_">AbstractClient&lt;T&gt;.OnNotifyPropertyChanged(String)</a>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="BaseClients.Core.html">BaseClients.Core</a></h6>
   <h6><strong>Assembly</strong>: BaseClients.Core.dll</h6>
   <h5 id="BaseClients_Core_AbstractCallbackClient_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AbstractCallbackClient&lt;T&gt; : AbstractClient&lt;T&gt;, ICallbackClient, IClient, IDisposable, INotifyPropertyChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AbstractCallbackClient&lt;T&gt; : AbstractClient&lt;T&gt;, ICallbackClient, IClient, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,15 +128,20 @@
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1__ctor_System_Uri_System_TimeSpan_System_ServiceModel_NetTcpBinding_.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.%23ctor(System.Uri%2CSystem.TimeSpan%2CSystem.ServiceModel.NetTcpBinding)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L28">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractCallbackClient_1__ctor_" data-uid="BaseClients.Core.AbstractCallbackClient`1.#ctor*"></a>
-  <h4 id="BaseClients_Core_AbstractCallbackClient_1__ctor_System_Uri_System_ServiceModel_NetTcpBinding_" data-uid="BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.ServiceModel.NetTcpBinding)">AbstractCallbackClient(Uri, NetTcpBinding)</h4>
+  <h4 id="BaseClients_Core_AbstractCallbackClient_1__ctor_System_Uri_System_TimeSpan_System_ServiceModel_NetTcpBinding_" data-uid="BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.TimeSpan,System.ServiceModel.NetTcpBinding)">AbstractCallbackClient(Uri, TimeSpan, NetTcpBinding)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AbstractCallbackClient(Uri netTcpUri, NetTcpBinding binding = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AbstractCallbackClient(Uri netTcpUri, TimeSpan heartbeat = default(TimeSpan), NetTcpBinding binding = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,6 +159,11 @@
         <td></td>
       </tr>
       <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">heartbeat</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">System.ServiceModel.NetTcpBinding</span></td>
         <td><span class="parametername">binding</span></td>
         <td></td>
@@ -172,8 +172,13 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_context.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.context%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L16">View Source</a>
+  </span>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_context" data-uid="BaseClients.Core.AbstractCallbackClient`1.context">context</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -196,8 +201,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_heartbeatReset.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.heartbeatReset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L18">View Source</a>
+  </span>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_heartbeatReset" data-uid="BaseClients.Core.AbstractCallbackClient`1.heartbeatReset">heartbeatReset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -222,8 +232,43 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_Heartbeat.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.Heartbeat%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L114">View Source</a>
+  </span>
+  <a id="BaseClients_Core_AbstractCallbackClient_1_Heartbeat_" data-uid="BaseClients.Core.AbstractCallbackClient`1.Heartbeat*"></a>
+  <h4 id="BaseClients_Core_AbstractCallbackClient_1_Heartbeat" data-uid="BaseClients.Core.AbstractCallbackClient`1.Heartbeat">Heartbeat</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Heartbeat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_IsConnected.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.IsConnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L48">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractCallbackClient_1_IsConnected_" data-uid="BaseClients.Core.AbstractCallbackClient`1.IsConnected*"></a>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_IsConnected" data-uid="BaseClients.Core.AbstractCallbackClient`1.IsConnected">IsConnected</h4>
   <div class="markdown level1 summary"></div>
@@ -247,8 +292,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_Key.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L116">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractCallbackClient_1_Key_" data-uid="BaseClients.Core.AbstractCallbackClient`1.Key*"></a>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_Key" data-uid="BaseClients.Core.AbstractCallbackClient`1.Key">Key</h4>
   <div class="markdown level1 summary"></div>
@@ -272,8 +322,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_Terminate.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.Terminate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L118">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractCallbackClient_1_Terminate_" data-uid="BaseClients.Core.AbstractCallbackClient`1.Terminate*"></a>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_Terminate" data-uid="BaseClients.Core.AbstractCallbackClient`1.Terminate">Terminate</h4>
   <div class="markdown level1 summary"></div>
@@ -299,33 +354,13 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="BaseClients_Core_AbstractCallbackClient_1_CreateChannelFactory_" data-uid="BaseClients.Core.AbstractCallbackClient`1.CreateChannelFactory*"></a>
-  <h4 id="BaseClients_Core_AbstractCallbackClient_1_CreateChannelFactory" data-uid="BaseClients.Core.AbstractCallbackClient`1.CreateChannelFactory">CreateChannelFactory()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected DuplexChannelFactory&lt;T&gt; CreateChannelFactory()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ServiceModel.DuplexChannelFactory</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L175">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractCallbackClient_1_Dispose_" data-uid="BaseClients.Core.AbstractCallbackClient`1.Dispose*"></a>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_Dispose_System_Boolean_" data-uid="BaseClients.Core.AbstractCallbackClient`1.Dispose(System.Boolean)">Dispose(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -353,8 +388,13 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">BaseClients.Core.AbstractClient&lt;T&gt;.Dispose(System.Boolean)</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_Finalize.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L39">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractCallbackClient_1_Finalize_" data-uid="BaseClients.Core.AbstractCallbackClient`1.Finalize*"></a>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_Finalize" data-uid="BaseClients.Core.AbstractCallbackClient`1.Finalize">Finalize()</h4>
   <div class="markdown level1 summary"></div>
@@ -363,18 +403,163 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
   </div>
-  
-  
-  <a id="BaseClients_Core_AbstractCallbackClient_1_HeartbeatThread_" data-uid="BaseClients.Core.AbstractCallbackClient`1.HeartbeatThread*"></a>
-  <h4 id="BaseClients_Core_AbstractCallbackClient_1_HeartbeatThread" data-uid="BaseClients.Core.AbstractCallbackClient`1.HeartbeatThread">HeartbeatThread()</h4>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_HandleAPICall_System_Func__0_GAAPICommon_Core_Dtos_ServiceCallResultDto__.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.HandleAPICall(System.Func%7B%600%2CGAAPICommon.Core.Dtos.ServiceCallResultDto%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L124">View Source</a>
+  </span>
+  <a id="BaseClients_Core_AbstractCallbackClient_1_HandleAPICall_" data-uid="BaseClients.Core.AbstractCallbackClient`1.HandleAPICall*"></a>
+  <h4 id="BaseClients_Core_AbstractCallbackClient_1_HandleAPICall_System_Func__0_GAAPICommon_Core_Dtos_ServiceCallResultDto__" data-uid="BaseClients.Core.AbstractCallbackClient`1.HandleAPICall(System.Func{`0,GAAPICommon.Core.Dtos.ServiceCallResultDto})">HandleAPICall(Func&lt;T, ServiceCallResultDto&gt;)</h4>
+  <div class="markdown level1 summary"><p>Handles an API call that returns an IServiceCallResult</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IServiceCallResult HandleAPICall(Func&lt;T, ServiceCallResultDto&gt; apiCall)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">GAAPICommon.Core.Dtos.ServiceCallResultDto</span>&gt;</td>
+        <td><span class="parametername">apiCall</span></td>
+        <td><p>Method the handles the channel call</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_HandleAPICall__1_System_Func__0_GAAPICommon_Core_Dtos_ServiceCallResultDto___0___.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.HandleAPICall%60%601(System.Func%7B%600%2CGAAPICommon.Core.Dtos.ServiceCallResultDto%7B%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L150">View Source</a>
+  </span>
+  <a id="BaseClients_Core_AbstractCallbackClient_1_HandleAPICall_" data-uid="BaseClients.Core.AbstractCallbackClient`1.HandleAPICall*"></a>
+  <h4 id="BaseClients_Core_AbstractCallbackClient_1_HandleAPICall__1_System_Func__0_GAAPICommon_Core_Dtos_ServiceCallResultDto___0___" data-uid="BaseClients.Core.AbstractCallbackClient`1.HandleAPICall``1(System.Func{`0,GAAPICommon.Core.Dtos.ServiceCallResultDto{``0}})">HandleAPICall&lt;U&gt;(Func&lt;T, ServiceCallResultDto&lt;U&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Handles an API call that returns a value of type T</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IServiceCallResult&lt;U&gt; HandleAPICall&lt;U&gt;(Func&lt;T, ServiceCallResultDto&lt;U&gt;&gt; apiCall)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">GAAPICommon.Core.Dtos.ServiceCallResultDto</span>&lt;U&gt;&gt;</td>
+        <td><span class="parametername">apiCall</span></td>
+        <td><p>Method the handles the channel call</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span>&lt;U&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_HandleSubscriptionHeartbeat__0_System_Guid_.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.HandleSubscriptionHeartbeat(%600%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L68">View Source</a>
+  </span>
+  <a id="BaseClients_Core_AbstractCallbackClient_1_HandleSubscriptionHeartbeat_" data-uid="BaseClients.Core.AbstractCallbackClient`1.HandleSubscriptionHeartbeat*"></a>
+  <h4 id="BaseClients_Core_AbstractCallbackClient_1_HandleSubscriptionHeartbeat__0_System_Guid_" data-uid="BaseClients.Core.AbstractCallbackClient`1.HandleSubscriptionHeartbeat(`0,System.Guid)">HandleSubscriptionHeartbeat(T, Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void HeartbeatThread()</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void HandleSubscriptionHeartbeat(T channel, Guid key)</code></pre>
   </div>
-  
-  
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">channel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_SetInstanceContext.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.SetInstanceContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L188">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractCallbackClient_1_SetInstanceContext_" data-uid="BaseClients.Core.AbstractCallbackClient`1.SetInstanceContext*"></a>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_SetInstanceContext" data-uid="BaseClients.Core.AbstractCallbackClient`1.SetInstanceContext">SetInstanceContext()</h4>
   <div class="markdown level1 summary"></div>
@@ -385,8 +570,13 @@
   </div>
   <h3 id="events">Events
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_Connected.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.Connected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L44">View Source</a>
+  </span>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_Connected" data-uid="BaseClients.Core.AbstractCallbackClient`1.Connected">Connected</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -409,8 +599,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1_Disconnected.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601.Disconnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L46">View Source</a>
+  </span>
   <h4 id="BaseClients_Core_AbstractCallbackClient_1_Disconnected" data-uid="BaseClients.Core.AbstractCallbackClient`1.Disconnected">Disconnected</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -435,16 +630,13 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="BaseClients.Core.ICallbackClient.html">ICallbackClient</a>
+      <a class="xref" href="BaseClients.Architecture.ICallbackClient.html">ICallbackClient</a>
   </div>
   <div>
-      <a class="xref" href="BaseClients.Core.IClient.html">IClient</a>
+      <a class="xref" href="BaseClients.Architecture.IClient.html">IClient</a>
   </div>
   <div>
       <span class="xref">System.IDisposable</span>
-  </div>
-  <div>
-      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
   </div>
 </article>
           </div>
@@ -453,6 +645,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractCallbackClient_1.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractCallbackClient%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractCallbackClient.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
@@ -471,7 +669,7 @@
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Copyright <strong>Guidance Automation Ltd</strong></span>
+            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

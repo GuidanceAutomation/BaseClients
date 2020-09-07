@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class EndpointSettings_ExtensionMethods
+    <title>Class AbstractGenericConsoleOption&lt;T, U&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class EndpointSettings_ExtensionMethods
+    <meta name="title" content="Class AbstractGenericConsoleOption&lt;T, U&gt;
    ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -68,40 +68,60 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="BaseClients.Core.EndpointSettings_ExtensionMethods">
+            <article class="content wrap" id="_content" data-uid="BaseClients.Core.AbstractGenericConsoleOption`2">
   
   
-  <h1 id="BaseClients_Core_EndpointSettings_ExtensionMethods" data-uid="BaseClients.Core.EndpointSettings_ExtensionMethods" class="text-break">Class EndpointSettings_ExtensionMethods
+  <h1 id="BaseClients_Core_AbstractGenericConsoleOption_2" data-uid="BaseClients.Core.AbstractGenericConsoleOption`2" class="text-break">Class AbstractGenericConsoleOption&lt;T, U&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">EndpointSettings_ExtensionMethods</span></div>
+    <div class="level1"><span class="xref">AbstractGenericConsoleOption&lt;T, U&gt;</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="BaseClients.Core.html">BaseClients.Core</a></h6>
   <h6><strong>Assembly</strong>: BaseClients.Core.dll</h6>
-  <h5 id="BaseClients_Core_EndpointSettings_ExtensionMethods_syntax">Syntax</h5>
+  <h5 id="BaseClients_Core_AbstractGenericConsoleOption_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class EndpointSettings_ExtensionMethods</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AbstractGenericConsoleOption&lt;T, U&gt;
+    where T : IClient</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_ExtensionMethods_ToHttpBase_BaseClients_Core_EndpointSettings_.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase(BaseClients.Core.EndpointSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractGenericConsoleOption_2_ExecuteOption__0_.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractGenericConsoleOption%602.ExecuteOption(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings_ExtensionMethods.cs/#L8">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractConsoleOption.cs/#L10">View Source</a>
   </span>
-  <a id="BaseClients_Core_EndpointSettings_ExtensionMethods_ToHttpBase_" data-uid="BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase*"></a>
-  <h4 id="BaseClients_Core_EndpointSettings_ExtensionMethods_ToHttpBase_BaseClients_Core_EndpointSettings_" data-uid="BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase(BaseClients.Core.EndpointSettings)">ToHttpBase(EndpointSettings)</h4>
+  <a id="BaseClients_Core_AbstractGenericConsoleOption_2_ExecuteOption_" data-uid="BaseClients.Core.AbstractGenericConsoleOption`2.ExecuteOption*"></a>
+  <h4 id="BaseClients_Core_AbstractGenericConsoleOption_2_ExecuteOption__0_" data-uid="BaseClients.Core.AbstractGenericConsoleOption`2.ExecuteOption(`0)">ExecuteOption(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Uri ToHttpBase(this EndpointSettings endpointSettings)</code></pre>
+    <pre><code class="lang-csharp hljs">public IServiceCallResult&lt;U&gt; ExecuteOption(T client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,8 +134,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="BaseClients.Core.EndpointSettings.html">EndpointSettings</a></td>
-        <td><span class="parametername">endpointSettings</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">client</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -130,25 +150,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Uri</span></td>
+        <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span>&lt;U&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_ExtensionMethods_ToTcpBase_BaseClients_Core_EndpointSettings_.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase(BaseClients.Core.EndpointSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractGenericConsoleOption_2_HandleExecution__0_.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractGenericConsoleOption%602.HandleExecution(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings_ExtensionMethods.cs/#L11">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractConsoleOption.cs/#L30">View Source</a>
   </span>
-  <a id="BaseClients_Core_EndpointSettings_ExtensionMethods_ToTcpBase_" data-uid="BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase*"></a>
-  <h4 id="BaseClients_Core_EndpointSettings_ExtensionMethods_ToTcpBase_BaseClients_Core_EndpointSettings_" data-uid="BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase(BaseClients.Core.EndpointSettings)">ToTcpBase(EndpointSettings)</h4>
+  <a id="BaseClients_Core_AbstractGenericConsoleOption_2_HandleExecution_" data-uid="BaseClients.Core.AbstractGenericConsoleOption`2.HandleExecution*"></a>
+  <h4 id="BaseClients_Core_AbstractGenericConsoleOption_2_HandleExecution__0_" data-uid="BaseClients.Core.AbstractGenericConsoleOption`2.HandleExecution(`0)">HandleExecution(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Uri ToTcpBase(this EndpointSettings endpointSettings)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract IServiceCallResult&lt;U&gt; HandleExecution(T client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,8 +181,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="BaseClients.Core.EndpointSettings.html">EndpointSettings</a></td>
-        <td><span class="parametername">endpointSettings</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">client</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -177,7 +197,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Uri</span></td>
+        <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span>&lt;U&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -190,10 +210,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_ExtensionMethods.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings_ExtensionMethods%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractGenericConsoleOption_2.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractGenericConsoleOption%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings_ExtensionMethods.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractConsoleOption.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
