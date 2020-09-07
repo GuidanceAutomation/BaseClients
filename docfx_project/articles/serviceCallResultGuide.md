@@ -89,6 +89,8 @@ public interface IServiceCallResult<T> : IServiceCallResult
 }
 ```
 
-If the call is successful (i.e. ```ServiceCode == 0```) then the ```Value``` property contains the returned value. If the call is unsuccessful the value property with be ```default(T)```.
+> [!IMPORTANT]
+> If the call is successful (i.e. ```ServiceCode == 0```) then the ```Value``` property contains the returned value. If the call is unsuccessful the value property with be ```default(T)```.
 
-The success of the call (i.e. the service code) should always be validated before using the returned value.
+> [!WARNING]
+> The success of the call (i.e. the service code) should always be validated before using the returned value.
