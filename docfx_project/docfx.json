@@ -4,7 +4,7 @@
       "src": [
         {
           "files": [ "**.csproj" ],
-          "exclude": [ "**/bin/**", "**/obj/**", "**Console/", "**App/" ],
+          "exclude": [ "**/bin/**", "**/obj/**", "**Console/", "**App/", "**Tutorial**/" ],
           "src": "../src"
         }
       ],
@@ -54,7 +54,7 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/guidanceAutomation"
+      "templates/material"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",

@@ -79,4 +79,14 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+  RD /S /Q "$(SolutionDir)docs\"
+  "$(SolutionDir)docfx.bat"
+) ELSE (
+  echo "no docfx content generated in debug"
+)
+
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>

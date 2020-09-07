@@ -5,6 +5,11 @@ using System;
 
 namespace BaseClients.Core
 {
+    /// <summary>
+    /// Abstract class for console applications calling a client method that returns a value.
+    /// </summary>
+    /// <typeparam name="T">Client instance</typeparam>
+    /// <typeparam name="U">IServiceCallResult<typeparamref name="U"/>value</typeparam>
     public abstract class AbstractGenericConsoleOption<T, U> where T : IClient
     {
         public IServiceCallResult<U> ExecuteOption(T client)
@@ -30,6 +35,10 @@ namespace BaseClients.Core
         protected abstract IServiceCallResult<U> HandleExecution(T client);
     }
 
+    /// <summary>
+    /// Abstract class for console applications calling a client method that returns void
+    /// </summary>
+    /// <typeparam name="T">Client instance</typeparam>
     public abstract class AbstractConsoleOption<T> where T : IClient
     {
         public IServiceCallResult ExecuteOption(T client)
@@ -46,7 +55,8 @@ namespace BaseClients.Core
                 return ServiceCallResultFactory.FromClientException(ex);
             }
 
-            if (result.ServiceCode != 0) Console.WriteLine(result);
+            if (result.ServiceCode != 0)
+                Console.WriteLine(result);
 
             return result;
         }

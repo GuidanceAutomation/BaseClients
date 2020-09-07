@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -73,7 +73,8 @@
   
   <h1 id="BaseClients_Core_AbstractConsoleOption_1" data-uid="BaseClients.Core.AbstractConsoleOption`1" class="text-break">Class AbstractConsoleOption&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Abstract class for console applications calling a client method that returns void</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -98,21 +99,27 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Client instance</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractConsoleOption_1_ExecuteOption__0_.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractConsoleOption%601.ExecuteOption(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractConsoleOption.cs/#L44">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractConsoleOption_1_ExecuteOption_" data-uid="BaseClients.Core.AbstractConsoleOption`1.ExecuteOption*"></a>
   <h4 id="BaseClients_Core_AbstractConsoleOption_1_ExecuteOption__0_" data-uid="BaseClients.Core.AbstractConsoleOption`1.ExecuteOption(`0)">ExecuteOption(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ServiceOperationResult ExecuteOption(T client)</code></pre>
+    <pre><code class="lang-csharp hljs">public IServiceCallResult ExecuteOption(T client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,20 +148,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="BaseClients.Core.ServiceOperationResult.html">ServiceOperationResult</a></td>
+        <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractConsoleOption_1_HandleExecution__0_.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractConsoleOption%601.HandleExecution(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractConsoleOption.cs/#L64">View Source</a>
+  </span>
   <a id="BaseClients_Core_AbstractConsoleOption_1_HandleExecution_" data-uid="BaseClients.Core.AbstractConsoleOption`1.HandleExecution*"></a>
   <h4 id="BaseClients_Core_AbstractConsoleOption_1_HandleExecution__0_" data-uid="BaseClients.Core.AbstractConsoleOption`1.HandleExecution(`0)">HandleExecution(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract ServiceOperationResult HandleExecution(T client)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract IServiceCallResult HandleExecution(T client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,7 +195,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="BaseClients.Core.ServiceOperationResult.html">ServiceOperationResult</a></td>
+        <td><span class="xref">GAAPICommon.Architecture.IServiceCallResult</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -195,6 +207,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_AbstractConsoleOption_1.md&amp;value=---%0Auid%3A%20BaseClients.Core.AbstractConsoleOption%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/AbstractConsoleOption.cs/#L42" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
@@ -213,7 +231,7 @@
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Copyright <strong>Guidance Automation Ltd</strong></span>
+            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

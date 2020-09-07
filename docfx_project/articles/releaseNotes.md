@@ -13,6 +13,10 @@ ______                _____ _ _            _
 
 # Release Notes
 
+## v2.0.0 (7th Sep 20)
+
+* Implements new ServiceCallResult and ServiceCallResult<T> generic implementation.
+
 ## v1.2.1 (13th Sep 19)
 
 * Updates all assemblies to .net framework 4.7.2.
