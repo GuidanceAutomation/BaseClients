@@ -19,7 +19,7 @@ namespace BaseClients.Core
         }
 
         /// <summary>
-        /// Converts endpoitn settings to a base TCP uri.        
+        /// Converts endpoint settings to a base TCP uri.        
         /// </summary>
         /// <param name="endpointSettings">Endpoint settings to convert.</param>
         /// <returns>Base Uri address, e.g. net.tcp://192.168.0.1:41917</returns>

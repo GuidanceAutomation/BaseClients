@@ -73,7 +73,7 @@
   
   <h1 id="BaseClients_Core_EndpointSettings" data-uid="BaseClients.Core.EndpointSettings" class="text-break">Class EndpointSettings
   </h1>
-  <div class="markdown level0 summary"><p>A simple struct for representing an ip address and associated ports used for http, tcp and udp communication.</p>
+  <div class="markdown level0 summary"><p>Tightly couuples an IP Address associated ports used for http, tcp and udp communication.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -94,11 +94,12 @@
     <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings__ctor_System_Net_IPAddress_System_UInt16_System_UInt16_System_UInt16_.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings.%23ctor(System.Net.IPAddress%2CSystem.UInt16%2CSystem.UInt16%2CSystem.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L10">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L17">View Source</a>
   </span>
   <a id="BaseClients_Core_EndpointSettings__ctor_" data-uid="BaseClients.Core.EndpointSettings.#ctor*"></a>
   <h4 id="BaseClients_Core_EndpointSettings__ctor_System_Net_IPAddress_System_UInt16_System_UInt16_System_UInt16_" data-uid="BaseClients.Core.EndpointSettings.#ctor(System.Net.IPAddress,System.UInt16,System.UInt16,System.UInt16)">EndpointSettings(IPAddress, UInt16, UInt16, UInt16)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Primary constructor.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -117,7 +118,8 @@
       <tr>
         <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">ipAddress</span></td>
-        <td></td>
+        <td><p>Server IP Address.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt16</span></td>
@@ -143,11 +145,12 @@
     <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_HttpPort.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings.HttpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L18">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L28">View Source</a>
   </span>
   <a id="BaseClients_Core_EndpointSettings_HttpPort_" data-uid="BaseClients.Core.EndpointSettings.HttpPort*"></a>
   <h4 id="BaseClients_Core_EndpointSettings_HttpPort" data-uid="BaseClients.Core.EndpointSettings.HttpPort">HttpPort</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Server HTTP port (default 41916).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,11 +176,12 @@
     <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_IPAddress.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings.IPAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L20">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L33">View Source</a>
   </span>
   <a id="BaseClients_Core_EndpointSettings_IPAddress_" data-uid="BaseClients.Core.EndpointSettings.IPAddress*"></a>
   <h4 id="BaseClients_Core_EndpointSettings_IPAddress" data-uid="BaseClients.Core.EndpointSettings.IPAddress">IPAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Server IP Address (default loop-back).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -203,11 +207,12 @@
     <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_TcpPort.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings.TcpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L22">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L38">View Source</a>
   </span>
   <a id="BaseClients_Core_EndpointSettings_TcpPort_" data-uid="BaseClients.Core.EndpointSettings.TcpPort*"></a>
   <h4 id="BaseClients_Core_EndpointSettings_TcpPort" data-uid="BaseClients.Core.EndpointSettings.TcpPort">TcpPort</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Server TCP port (default 41917).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -233,11 +238,12 @@
     <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_UdpPort.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings.UdpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L24">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L43">View Source</a>
   </span>
   <a id="BaseClients_Core_EndpointSettings_UdpPort_" data-uid="BaseClients.Core.EndpointSettings.UdpPort*"></a>
   <h4 id="BaseClients_Core_EndpointSettings_UdpPort" data-uid="BaseClients.Core.EndpointSettings.UdpPort">UdpPort</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Server UDP port (default 41918).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -265,7 +271,7 @@
     <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_ToString.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L26">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L45">View Source</a>
   </span>
   <a id="BaseClients_Core_EndpointSettings_ToString_" data-uid="BaseClients.Core.EndpointSettings.ToString*"></a>
   <h4 id="BaseClients_Core_EndpointSettings_ToString" data-uid="BaseClients.Core.EndpointSettings.ToString">ToString()</h4>
@@ -297,7 +303,7 @@
     <a href="https://github.com/GuidanceAutomation/BaseClients/new/docfx_tidy/apiSpec/new?filename=BaseClients_Core_EndpointSettings_ToSummaryString.md&amp;value=---%0Auid%3A%20BaseClients.Core.EndpointSettings.ToSummaryString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L28">View Source</a>
+    <a href="https://github.com/GuidanceAutomation/BaseClients/blob/docfx_tidy/src/BaseClients.Core/EndpointSettings.cs/#L47">View Source</a>
   </span>
   <a id="BaseClients_Core_EndpointSettings_ToSummaryString_" data-uid="BaseClients.Core.EndpointSettings.ToSummaryString*"></a>
   <h4 id="BaseClients_Core_EndpointSettings_ToSummaryString" data-uid="BaseClients.Core.EndpointSettings.ToSummaryString">ToSummaryString()</h4>
