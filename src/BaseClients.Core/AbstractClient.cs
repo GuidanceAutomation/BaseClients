@@ -5,12 +5,13 @@ using GAAPICommon.Core.Dtos;
 using NLog;
 using System;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
 
 namespace BaseClients.Core
 {
     public abstract class AbstractClient<T> : IClient
     {
-        protected readonly NetTcpBinding binding;
+        protected readonly Binding binding;
 
         private bool isDisposed = false;
 
@@ -21,13 +22,30 @@ namespace BaseClients.Core
         /// <summary>
         /// Primary constructor.
         /// </summary>
-        /// <param name="netTcpUri">.net tcp uri of the server side endpoint.</param>
+        /// <param name="uri">Uniform resource identifier of the server side endpoint.</param>
         /// <param name="binding">Transport and security binding settings.</param>
-        public AbstractClient(Uri netTcpUri, NetTcpBinding netTcpBinding = null)
+        public AbstractClient(Uri uri)
         {
-            EndpointAddress = new EndpointAddress(netTcpUri);
+            EndpointAddress = new EndpointAddress(uri);
 
-            binding = netTcpBinding ?? new NetTcpBinding(SecurityMode.None) { PortSharingEnabled = true };
+            switch(uri.ToScheme())
+            {
+                case Scheme.NetTcp:
+                    {
+                        binding = new NetTcpBinding(SecurityMode.None) { PortSharingEnabled = true };
+                        break;
+                    }
+
+                case Scheme.NetPipe:
+                    {
+                        binding = new NetNamedPipeBinding();
+                        break;
+                    }
+
+
+                default:
+                    throw new NotImplementedException();
+            }
         }
 
         ~AbstractClient()
@@ -122,7 +140,13 @@ namespace BaseClients.Core
             {
                 logger = value ?? LogManager.CreateNullLogger();
 
-                logger.Info("Binding:{0} PortSharing:{1}", binding.Name, binding.PortSharingEnabled);
+                if (binding is NetTcpBinding netTcpBinding)                
+                    logger.Info($"Binding (net.tcp):{netTcpBinding.Name} PortSharing:{netTcpBinding.PortSharingEnabled}");
+                else if(binding is NetNamedPipeBinding netNamedPipeBinding)               
+                    logger.Info($"Binding (net.pipe):{netNamedPipeBinding.Name}");
+                else
+                    logger.Info($"Binding: {binding.Name}");               
+
                 logger.Info("Endpoint Address:{0}", EndpointAddress);
             }
         }

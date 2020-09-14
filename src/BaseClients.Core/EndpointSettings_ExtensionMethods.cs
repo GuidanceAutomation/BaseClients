@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseClients.Architecture;
+using System;
 using System.Net;
 
 namespace BaseClients.Core
@@ -16,6 +17,80 @@ namespace BaseClients.Core
                 throw new ArgumentNullException("endpointSettings");
 
            return new Uri("http://" + new IPEndPoint(endpointSettings.IPAddress, endpointSettings.HttpPort).ToString());
+        }
+
+        public static Scheme ToScheme(this Uri uri)
+        {
+            if (uri == null)
+                throw new ArgumentNullException("uri");
+
+            if (uri.IsHttp())
+                return Scheme.Http;
+
+            if (uri.IsNetTcp())
+                return Scheme.NetTcp;
+
+            if (uri.IsNetPipe())
+                return Scheme.NetPipe;
+
+            throw new ArgumentOutOfRangeException("Uri does not contain a valid scheme");
+        }
+
+        public static bool IsNetTcp(this Uri uri)
+        {
+            if (uri == null)
+                throw new ArgumentNullException("uri");
+
+            try
+            {
+                string scheme = uri.Scheme;
+
+                if (scheme.Equals("net.tcp"))
+                    return true;
+            }
+            catch
+            {
+            }
+
+            return false;
+        }
+
+        public static bool IsHttp(this Uri uri)
+        {
+            if (uri == null)
+                throw new ArgumentNullException("uri");
+
+            try
+            {
+                string scheme = uri.Scheme;
+
+                if (scheme.Equals("http"))
+                    return true;               
+            }
+            catch
+            {
+            }
+
+            return false;
+        }
+
+        public static bool IsNetPipe(this Uri uri)
+        {
+            if (uri == null)
+                throw new ArgumentNullException("uri");
+
+            try
+            {
+                string scheme = uri.Scheme;
+
+                if (scheme.Equals("net.pipe"))
+                    return true;
+            }
+            catch
+            {
+            }
+
+            return false;
         }
 
         /// <summary>

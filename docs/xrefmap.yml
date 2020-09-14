@@ -679,6 +679,19 @@ references:
   commentId: T:BaseClients.Core.EndpointSettings_ExtensionMethods
   fullName: BaseClients.Core.EndpointSettings_ExtensionMethods
   nameWithType: EndpointSettings_ExtensionMethods
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp(System.Uri)
+  name: IsHttp(Uri)
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsHttp_System_Uri_
+  commentId: M:BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp(System.Uri)
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp(System.Uri)
+  nameWithType: EndpointSettings_ExtensionMethods.IsHttp(Uri)
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp*
+  name: IsHttp
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsHttp_
+  commentId: Overload:BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp
+  nameWithType: EndpointSettings_ExtensionMethods.IsHttp
 - uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase(BaseClients.Core.EndpointSettings)
   name: ToHttpBase(EndpointSettings)
   href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToHttpBase_BaseClients_Core_EndpointSettings_
