@@ -28,9 +28,8 @@ namespace BaseClients.Core
         /// </summary>
         /// <param name="netTcpUri">.net tcp uri of the server side endpoint.</param>
         /// <param name="heartbeat">Interval between registration (keep-alive) for callbacks.</param>
-        /// <param name="binding">Transport and security binding settings.</param>
-        public AbstractCallbackClient(Uri netTcpUri, TimeSpan heartbeat = default, NetTcpBinding binding = null)
-            : base(netTcpUri, binding)
+        public AbstractCallbackClient(Uri netTcpUri, TimeSpan heartbeat = default)
+            : base(netTcpUri)
         {
             SetInstanceContext();
 

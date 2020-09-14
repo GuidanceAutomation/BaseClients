@@ -12,7 +12,7 @@
           "hash": "CDS3MEKQKXogblim94ZQqQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "AI6tQkPDbd/1j7ta5MsWRw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -36,7 +36,7 @@
           "hash": "0CZaS6Xpoa0BVPqNEMjjig=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "K+aCR1CWBAlOXMw5ET0bAw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.AbstractClient-1.html",
-          "hash": "itrw12V41BcFa3zsWgpi6w=="
+          "hash": "IWYCD06Oj0uG6D4DGl9qMg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/BaseClients.Core.EndpointSettings_ExtensionMethods.html",
-          "hash": "Vu0jRxtDztv8urCFVqqdFQ=="
+          "hash": "h1C+QQuKdi8V9PAxpbLNZw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "Z4thia2rh1YhXN5lwhrjsg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -265,7 +265,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 10,
-          "skipped_file_count": 10
+          "skipped_file_count": 6
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
