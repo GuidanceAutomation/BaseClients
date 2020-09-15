@@ -109,6 +109,30 @@ references:
   isSpec: "True"
   fullName: BaseClients.Architecture.IClient.Logger
   nameWithType: IClient.Logger
+- uid: BaseClients.Architecture.Scheme
+  name: Scheme
+  href: api/BaseClients.Architecture.Scheme.html
+  commentId: T:BaseClients.Architecture.Scheme
+  fullName: BaseClients.Architecture.Scheme
+  nameWithType: Scheme
+- uid: BaseClients.Architecture.Scheme.Http
+  name: Http
+  href: api/BaseClients.Architecture.Scheme.html#BaseClients_Architecture_Scheme_Http
+  commentId: F:BaseClients.Architecture.Scheme.Http
+  fullName: BaseClients.Architecture.Scheme.Http
+  nameWithType: Scheme.Http
+- uid: BaseClients.Architecture.Scheme.NetPipe
+  name: NetPipe
+  href: api/BaseClients.Architecture.Scheme.html#BaseClients_Architecture_Scheme_NetPipe
+  commentId: F:BaseClients.Architecture.Scheme.NetPipe
+  fullName: BaseClients.Architecture.Scheme.NetPipe
+  nameWithType: Scheme.NetPipe
+- uid: BaseClients.Architecture.Scheme.NetTcp
+  name: NetTcp
+  href: api/BaseClients.Architecture.Scheme.html#BaseClients_Architecture_Scheme_NetTcp
+  commentId: F:BaseClients.Architecture.Scheme.NetTcp
+  fullName: BaseClients.Architecture.Scheme.NetTcp
+  nameWithType: Scheme.NetTcp
 - uid: BaseClients.Core
   name: BaseClients.Core
   href: api/BaseClients.Core.html
@@ -124,14 +148,14 @@ references:
   fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T)
   nameWithType: AbstractCallbackClient<T>
   nameWithType.vb: AbstractCallbackClient(Of T)
-- uid: BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.TimeSpan,System.ServiceModel.NetTcpBinding)
-  name: AbstractCallbackClient(Uri, TimeSpan, NetTcpBinding)
-  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1__ctor_System_Uri_System_TimeSpan_System_ServiceModel_NetTcpBinding_
-  commentId: M:BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.TimeSpan,System.ServiceModel.NetTcpBinding)
-  fullName: BaseClients.Core.AbstractCallbackClient<T>.AbstractCallbackClient(System.Uri, System.TimeSpan, System.ServiceModel.NetTcpBinding)
-  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).AbstractCallbackClient(System.Uri, System.TimeSpan, System.ServiceModel.NetTcpBinding)
-  nameWithType: AbstractCallbackClient<T>.AbstractCallbackClient(Uri, TimeSpan, NetTcpBinding)
-  nameWithType.vb: AbstractCallbackClient(Of T).AbstractCallbackClient(Uri, TimeSpan, NetTcpBinding)
+- uid: BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.TimeSpan)
+  name: AbstractCallbackClient(Uri, TimeSpan)
+  href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1__ctor_System_Uri_System_TimeSpan_
+  commentId: M:BaseClients.Core.AbstractCallbackClient`1.#ctor(System.Uri,System.TimeSpan)
+  fullName: BaseClients.Core.AbstractCallbackClient<T>.AbstractCallbackClient(System.Uri, System.TimeSpan)
+  fullName.vb: BaseClients.Core.AbstractCallbackClient(Of T).AbstractCallbackClient(System.Uri, System.TimeSpan)
+  nameWithType: AbstractCallbackClient<T>.AbstractCallbackClient(Uri, TimeSpan)
+  nameWithType.vb: AbstractCallbackClient(Of T).AbstractCallbackClient(Uri, TimeSpan)
 - uid: BaseClients.Core.AbstractCallbackClient`1.#ctor*
   name: AbstractCallbackClient
   href: api/BaseClients.Core.AbstractCallbackClient-1.html#BaseClients_Core_AbstractCallbackClient_1__ctor_
@@ -345,14 +369,14 @@ references:
   fullName.vb: BaseClients.Core.AbstractClient(Of T)
   nameWithType: AbstractClient<T>
   nameWithType.vb: AbstractClient(Of T)
-- uid: BaseClients.Core.AbstractClient`1.#ctor(System.Uri,System.ServiceModel.NetTcpBinding)
-  name: AbstractClient(Uri, NetTcpBinding)
-  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1__ctor_System_Uri_System_ServiceModel_NetTcpBinding_
-  commentId: M:BaseClients.Core.AbstractClient`1.#ctor(System.Uri,System.ServiceModel.NetTcpBinding)
-  fullName: BaseClients.Core.AbstractClient<T>.AbstractClient(System.Uri, System.ServiceModel.NetTcpBinding)
-  fullName.vb: BaseClients.Core.AbstractClient(Of T).AbstractClient(System.Uri, System.ServiceModel.NetTcpBinding)
-  nameWithType: AbstractClient<T>.AbstractClient(Uri, NetTcpBinding)
-  nameWithType.vb: AbstractClient(Of T).AbstractClient(Uri, NetTcpBinding)
+- uid: BaseClients.Core.AbstractClient`1.#ctor(System.Uri)
+  name: AbstractClient(Uri)
+  href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1__ctor_System_Uri_
+  commentId: M:BaseClients.Core.AbstractClient`1.#ctor(System.Uri)
+  fullName: BaseClients.Core.AbstractClient<T>.AbstractClient(System.Uri)
+  fullName.vb: BaseClients.Core.AbstractClient(Of T).AbstractClient(System.Uri)
+  nameWithType: AbstractClient<T>.AbstractClient(Uri)
+  nameWithType.vb: AbstractClient(Of T).AbstractClient(Uri)
 - uid: BaseClients.Core.AbstractClient`1.#ctor*
   name: AbstractClient
   href: api/BaseClients.Core.AbstractClient-1.html#BaseClients_Core_AbstractClient_1__ctor_
@@ -679,6 +703,45 @@ references:
   commentId: T:BaseClients.Core.EndpointSettings_ExtensionMethods
   fullName: BaseClients.Core.EndpointSettings_ExtensionMethods
   nameWithType: EndpointSettings_ExtensionMethods
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp(System.Uri)
+  name: IsHttp(Uri)
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsHttp_System_Uri_
+  commentId: M:BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp(System.Uri)
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp(System.Uri)
+  nameWithType: EndpointSettings_ExtensionMethods.IsHttp(Uri)
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp*
+  name: IsHttp
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsHttp_
+  commentId: Overload:BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsHttp
+  nameWithType: EndpointSettings_ExtensionMethods.IsHttp
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetPipe(System.Uri)
+  name: IsNetPipe(Uri)
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsNetPipe_System_Uri_
+  commentId: M:BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetPipe(System.Uri)
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetPipe(System.Uri)
+  nameWithType: EndpointSettings_ExtensionMethods.IsNetPipe(Uri)
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetPipe*
+  name: IsNetPipe
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsNetPipe_
+  commentId: Overload:BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetPipe
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetPipe
+  nameWithType: EndpointSettings_ExtensionMethods.IsNetPipe
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetTcp(System.Uri)
+  name: IsNetTcp(Uri)
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsNetTcp_System_Uri_
+  commentId: M:BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetTcp(System.Uri)
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetTcp(System.Uri)
+  nameWithType: EndpointSettings_ExtensionMethods.IsNetTcp(Uri)
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetTcp*
+  name: IsNetTcp
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_IsNetTcp_
+  commentId: Overload:BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetTcp
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.IsNetTcp
+  nameWithType: EndpointSettings_ExtensionMethods.IsNetTcp
 - uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase(BaseClients.Core.EndpointSettings)
   name: ToHttpBase(EndpointSettings)
   href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToHttpBase_BaseClients_Core_EndpointSettings_
@@ -692,6 +755,19 @@ references:
   isSpec: "True"
   fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.ToHttpBase
   nameWithType: EndpointSettings_ExtensionMethods.ToHttpBase
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToScheme(System.Uri)
+  name: ToScheme(Uri)
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToScheme_System_Uri_
+  commentId: M:BaseClients.Core.EndpointSettings_ExtensionMethods.ToScheme(System.Uri)
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.ToScheme(System.Uri)
+  nameWithType: EndpointSettings_ExtensionMethods.ToScheme(Uri)
+- uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToScheme*
+  name: ToScheme
+  href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToScheme_
+  commentId: Overload:BaseClients.Core.EndpointSettings_ExtensionMethods.ToScheme
+  isSpec: "True"
+  fullName: BaseClients.Core.EndpointSettings_ExtensionMethods.ToScheme
+  nameWithType: EndpointSettings_ExtensionMethods.ToScheme
 - uid: BaseClients.Core.EndpointSettings_ExtensionMethods.ToTcpBase(BaseClients.Core.EndpointSettings)
   name: ToTcpBase(EndpointSettings)
   href: api/BaseClients.Core.EndpointSettings_ExtensionMethods.html#BaseClients_Core_EndpointSettings_ExtensionMethods_ToTcpBase_BaseClients_Core_EndpointSettings_

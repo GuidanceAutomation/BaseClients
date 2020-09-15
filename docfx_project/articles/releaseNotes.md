@@ -13,6 +13,10 @@ ______                _____ _ _            _
 
 # Release Notes
 
+## v2.0.1 (14th Sep 20)
+
+* Adds support for named pipes.
+
 ## v2.0.0 (7th Sep 20)
 
 * Implements new ServiceCallResult and ServiceCallResult<T> generic implementation.
