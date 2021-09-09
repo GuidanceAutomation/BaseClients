@@ -31,11 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.15.0\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
+    <Reference Include="GAAPICommon.Architecture, Version=1.38.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GAAPICommon.1.38.1\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
     </Reference>
-    <Reference Include="GAAPICommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GAAPICommon.1.15.0\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
+    <Reference Include="GAAPICommon.Core, Version=1.38.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GAAPICommon.1.38.1\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NLog.4.7.5\lib\net45\NLog.dll</HintPath>
