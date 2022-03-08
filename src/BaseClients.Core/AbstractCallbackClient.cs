@@ -127,6 +127,9 @@ namespace BaseClients.Core
                 heartbeatReset.WaitOne(Heartbeat);
             }
 
+            Thread.Sleep(2000); // Allow any pending work to complete before closing.
+            channelFactory.Close();
+            IsConnected = false;
             Logger.Trace("HeartbeatThread exit");
         }
 
