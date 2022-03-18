@@ -86,6 +86,13 @@ namespace BaseClients.Core
         /// <param name="key">Unique client identifier</param>
         protected abstract void HandleSubscriptionHeartbeat(T channel, Guid key);
 
+        /// <summary>
+        /// Abstract implementation of callback unregistration. 
+        /// </summary>
+        /// <param name="channel">Channel to use for communication</param>
+        /// <param name="key">Unique client identifier</param>
+        protected abstract void HandleUnsubscribeHeartbeat(T channel, Guid key);
+
         private void HeartbeatThread()
         {
             Logger.Trace("HeartbeatThread()");
@@ -127,7 +134,11 @@ namespace BaseClients.Core
                 heartbeatReset.WaitOne(Heartbeat);
             }
 
-            Logger.Trace("HeartbeatThread exit");
+            HandleUnsubscribeHeartbeat(channel, Key);
+            Thread.Sleep(2000); // Allow any pending work to complete before closing.
+            channelFactory.Close();
+            IsConnected = false;
+            Logger.Trace($"HeartbeatThread exit {Key}");
         }
 
         /// <summary>
