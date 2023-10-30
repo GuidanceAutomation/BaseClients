@@ -17,7 +17,8 @@ namespace BaseClients
 
         private NetTcpBinding binding = new NetTcpBinding(SecurityMode.None)
         {
-            PortSharingEnabled = true
+            PortSharingEnabled = true,
+            MaxReceivedMessageSize = 2147483647,
         };
 
         private EndpointAddress endpointAddress;
